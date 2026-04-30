@@ -28,7 +28,7 @@ def clean_number(raw: str) -> str:
 
 def is_allowed_number(raw: str) -> bool:
     cleaned = clean_number(raw)
-    print(f"[AUTH] raw={raw} → cleaned={cleaned}")
+    print(f"[AUTH] raw={raw} -> cleaned={cleaned}")
     return cleaned in ALLOWED_NUMBERS
 
 

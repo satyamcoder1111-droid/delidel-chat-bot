@@ -27,7 +27,7 @@ PHONE_NUMBER_ID  = os.getenv("PHONE_NUMBER_ID",  "")
 VERIFY_TOKEN     = os.getenv("VERIFY_TOKEN",     "")
 
 # ── Redis Session Store ───────────────────────────────────────────────
-REDIS_URL   = os.getenv("REDIS_URL",   "")
+REDIS_URL   = os.getenv("REDIS_URL",   "https://true-giraffe-105851.upstash.io")
 REDIS_TOKEN = os.getenv("REDIS_TOKEN", "")
 
 # ── Auth ──────────────────────────────────────────────────────────────
