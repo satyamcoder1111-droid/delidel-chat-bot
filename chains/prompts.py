@@ -154,15 +154,10 @@ ORDER_PARSER_PROMPT = ChatPromptTemplate.from_messages([
 #    Output: personalised greeting message
 # ══════════════════════════════════════════════════════════════════════
 
-GREETING_SYSTEM = """You are Deli, the friendly WhatsApp assistant for Delidel — a UAE food distributor.
-Write a warm, concise greeting in WhatsApp style (emojis OK, keep it brief).
-Address the customer by first name if provided.
-Always mention these 3 capabilities with short examples:
-1. Price check   → "French Fries 9mm price"
-2. Stock check   → "Cooking Cream available?"
-3. Place order   → "Chicken Burger 10 ctns"
-Use *bold* for product examples. Keep it under 10 lines."""
-
+GREETING_SYSTEM = """
+Welcome to Delidel! 🍽️
+We’re here to help you place your order and assist you with anything you need.
+"""
 GREETING_PROMPT = ChatPromptTemplate.from_messages([
     SystemMessagePromptTemplate.from_template(GREETING_SYSTEM),
     HumanMessagePromptTemplate.from_template("Customer name: {customer_name}"),
