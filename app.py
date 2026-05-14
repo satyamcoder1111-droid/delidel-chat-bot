@@ -120,10 +120,10 @@ def chat():
     user_input    = body.get("message", "").strip()
     sender_number = body.get("sender_number", BOT_PHONE)
 
-    if not is_allowed_number(sender_number):
-        return jsonify({"reply": "Unauthorized"}), 403
-    if not user_input:
-        return jsonify({"reply": ""}), 200
+    # if not is_allowed_number(sender_number):
+    #     return jsonify({"reply": "Unauthorized"}), 403
+    # if not user_input:
+    #     return jsonify({"reply": ""}), 200
 
     try:
         reply = process_message(user_input, sender_number)
