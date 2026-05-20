@@ -176,9 +176,9 @@ def receive_webhook():
         user_input = msg["text"]["body"].strip()
         print(f"[MSG] {sender}: {user_input}")
 
-        if not is_allowed_number(sender):
-            print(f"[BLOCKED] {sender}")
-            return "OK", 200
+        # if not is_allowed_number(sender):
+        #     print(f"[BLOCKED] {sender}")
+        #     return "OK", 200
 
         # 3. Generate reply
         reply = process_message(user_input, sender)

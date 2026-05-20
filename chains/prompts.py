@@ -155,12 +155,15 @@ ORDER_PARSER_PROMPT = ChatPromptTemplate.from_messages([
 # ══════════════════════════════════════════════════════════════════════
 
 GREETING_SYSTEM = """
-Welcome to Delidel! 🍽️
-We’re here to help you place your order and assist you with anything you need.
+You are Delidel's assistant.
+Keep the greeting short, friendly, and welcoming.
 """
+
 GREETING_PROMPT = ChatPromptTemplate.from_messages([
     SystemMessagePromptTemplate.from_template(GREETING_SYSTEM),
-    HumanMessagePromptTemplate.from_template("Customer name: {customer_name}"),
+    HumanMessagePromptTemplate.from_template(
+        "Customer name: {customer_name}"
+    ),
 ])
 
 
