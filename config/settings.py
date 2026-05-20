@@ -11,7 +11,7 @@ GROQ_MODEL     = "llama-3.1-8b-instant"          # fast + cheap
 GROQ_MODEL_ADV = "llama-3.3-70b-versatile"       # for order parsing if needed
 
 # ── PrestaShop / Delidel API ─────────────────────────────────────────
-PRESTA_BASE_URL    = os.getenv("PRESTA_BASE_URL", "https://uae.delidel.in")
+PRESTA_BASE_URL    = os.getenv("PRESTA_BASE_URL", "https://stguae.delidel.in")
 PRESTA_API_KEY     = os.getenv("PRESTA_API_KEY",  "")
 CHATBOT_API_URL    = f"{PRESTA_BASE_URL}/module/ogachatbotapi/ogachatbotapi"
 PRESTA_REST_URL    = f"{PRESTA_BASE_URL}/api"     # native PrestaShop REST
