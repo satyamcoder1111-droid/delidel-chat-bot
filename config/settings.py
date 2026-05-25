@@ -11,8 +11,8 @@ GROQ_MODEL     = "llama-3.1-8b-instant"          # fast + cheap
 GROQ_MODEL_ADV = "llama-3.3-70b-versatile"       # for order parsing if needed
 
 # ── PrestaShop / Delidel API ─────────────────────────────────────────
-PRESTA_BASE_URL    = os.getenv("PRESTA_BASE_URL", "https://stguae.delidel.in")
-PRESTA_API_KEY     = os.getenv("PRESTA_API_KEY",  "")
+PRESTA_BASE_URL    = os.getenv("PRESTA_BASE_URL", "https://uae.delidel.in")
+PRESTA_API_KEY     = os.getenv("PRESTA_API_KEY",  "your_prestashop_key")
 CHATBOT_API_URL    = f"{PRESTA_BASE_URL}/module/ogachatbotapi/ogachatbotapi"
 PRESTA_REST_URL    = f"{PRESTA_BASE_URL}/api"     # native PrestaShop REST
 
@@ -33,6 +33,9 @@ REDIS_TOKEN = os.getenv("REDIS_TOKEN", "")
 # ── Auth ──────────────────────────────────────────────────────────────
 ALLOWED_NUMBERS = os.getenv("ALLOWED_NUMBERS", "9354906215,9759145356,7988149282").split(",")
 BOT_PHONE       = os.getenv("BOT_PHONE", "9759145356")
+
+# ── Session / Cart Expiration ─────────────────────────────────────────
+CART_EXPIRATION_MINUTES = int(os.getenv("CART_EXPIRATION_MINUTES", "10"))
 
 # ── Bot Persona ───────────────────────────────────────────────────────
 BOT_NAME       = "Deli"

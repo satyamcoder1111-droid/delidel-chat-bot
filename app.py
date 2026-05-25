@@ -65,6 +65,27 @@ def send_reply_via_crm(sender_number: str, message: str):
         print(f"[CRM SEND ERROR] {e}")
 
 
+def is_text_message(raw: dict) -> bool:
+    """Check if the Evolution payload message is actually a text message."""
+    msg_type = raw.get("messageType")
+    if msg_type:
+        return msg_type in ("conversation", "extendedTextMessage")
+    
+    # Fallback check on message object keys
+    msg_obj = raw.get("message", {})
+    if not msg_obj:
+        return False
+    
+    # If the message contains conversation or extendedTextMessage keys, it's text.
+    has_text_key = "conversation" in msg_obj or "extendedTextMessage" in msg_obj
+    has_media_key = any(k in msg_obj for k in (
+        "imageMessage", "documentMessage", "audioMessage", 
+        "videoMessage", "stickerMessage", "locationMessage", "contactMessage"
+    ))
+    
+    return has_text_key and not has_media_key
+
+
 def transform_evolution_to_standard(data: dict) -> dict:
     """
     Evolution API sends { data: { key: { remoteJid }, message: { conversation } } }.
@@ -73,6 +94,10 @@ def transform_evolution_to_standard(data: dict) -> dict:
     """
     raw    = data.get("data", {})
     sender = raw.get("key", {}).get("remoteJid", "").replace("@s.whatsapp.net", "")
+    
+    is_text = is_text_message(raw)
+    msg_type = "text" if is_text else "media"
+    
     text   = (
         raw.get("message", {}).get("conversation")
         or raw.get("message", {}).get("extendedTextMessage", {}).get("text")
@@ -84,7 +109,7 @@ def transform_evolution_to_standard(data: dict) -> dict:
                 "value": {
                     "messages": [{
                         "from": sender,
-                        "type": "text",
+                        "type": msg_type,
                         "text": {"body": text},
                     }]
                 }
@@ -184,7 +209,8 @@ def receive_webhook():
         reply = process_message(user_input, sender)
 
         # 4. Send via CRM
-        # send_reply_via_crm(sender, reply)
+        # if reply:
+        #     send_reply_via_crm(sender, reply)
 
     except Exception as e:
         print(f"[WEBHOOK ERROR] {e}")

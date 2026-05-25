@@ -76,7 +76,8 @@ CONTEXT CARRY-OVER RULES:
 - Brand/variant additions: last_product="Fries", user says "Sadia price" → product_name="Fries Sadia"
 
 LANGUAGE DETECTION:
-- Detect input language: english | arabic | hindi | mixed
+- Detect input language: english | arabic | hindi | mixed | other
+- If the customer's message is NOT in English, Arabic, or Hindi/Urdu, classify it as "other".
 - general_reply must be in the SAME language as the input
 
 UNIT NORMALISATION:

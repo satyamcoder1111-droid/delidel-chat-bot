@@ -20,7 +20,7 @@ from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableLambda
 
-from config.settings import GROQ_API_KEY, GROQ_MODEL
+from config.settings import GROQ_API_KEY, GROQ_MODEL, CART_EXPIRATION_MINUTES
 from config.session import (
     get_session, save_session, append_history,
     clear_cart, set_stage, clean_number,
@@ -68,6 +68,90 @@ def _safe_json(text: str, fallback):
         return json.loads(_extract_json(text))
     except Exception:
         return fallback
+
+
+def _is_yes_confirmation(text: str) -> bool:
+    text_clean = re.sub(r"[^\w\s]", "", text.lower().strip())
+    tokens = text_clean.split()
+    if not tokens:
+        return False
+    
+    YES_WORDS = {
+        "yes", "y", "ok", "okay", "confirm", "haan", "ha", "theek hai", 
+        "sure", "go ahead", "yas", "yess", "yesss", "yep", "yeah", "yup", "ys",
+        "done", "correct", "perfect", "thik", "theek", "thk", "sahi", "haji",
+        "ji", "han", "yuss", "yus"
+    }
+    
+    first_token = tokens[0]
+    if first_token in YES_WORDS:
+        return True
+        
+    for yes_phrase in (
+        "go ahead", "theek hai", "thik hai", "thk hai", "ok hai", 
+        "sahi hai", "ji haan", "ji han", "yes please", "yes of course"
+    ):
+        if text_clean.startswith(yes_phrase):
+            return True
+            
+    return False
+
+
+def _is_no_discard(text: str) -> bool:
+    text_clean = re.sub(r"[^\w\s]", "", text.lower().strip())
+    tokens = text_clean.split()
+    if not tokens:
+        return False
+        
+    NO_WORDS = {
+        "no", "nahi", "nhi", "cancel", "nevermind", "nope", "band kar", 
+        "nah", "na", "naa", "discard", "stop", "band"
+    }
+    
+    first_token = tokens[0]
+    if first_token in NO_WORDS:
+        # A token like "no", "nahi", "nhi", "na", "naa", "nah", "nope" is a discard word,
+        # but if there are other tokens, we only count it as a discard if it is part of a 
+        # known pure negative phrase. Otherwise, it could be a correction/update (e.g., "no fries 9mm").
+        if first_token in {"no", "nahi", "nhi", "na", "naa", "nah", "nope"}:
+            if len(tokens) == 1:
+                return True
+            pure_no_phrases = {
+                "no thanks", "no thank you", "dont want", "don't want", 
+                "cancel order", "cancel it", "nahi chahiye", "nhi chahiye", 
+                "not now", "no need", "no please", "no no", "nahi nahi", "nhi nhi",
+                "never", "never mind", "discard", "discard it", "no cancel", "no cancel order",
+                "cancel this order", "cancel my order", "please cancel", "pls cancel"
+            }
+            return any(text_clean.startswith(phrase) for phrase in pure_no_phrases) or text_clean in pure_no_phrases
+        return True
+        
+    for no_phrase in (
+        "band kar", "never mind", "no thanks", "dont want", "don't want", 
+        "cancel order", "cancel it", "nahi chahiye", "nhi chahiye", 
+        "not now", "no need", "no no", "nahi nahi", "nhi nhi", "cancel this order",
+        "cancel my order", "please cancel", "pls cancel"
+    ):
+        if text_clean.startswith(no_phrase):
+            return True
+            
+    return False
+
+
+def _extract_negated_replacement(text: str) -> str:
+    """
+    If the message starts with a negative/discard word (e.g. 'no', 'nahi', 'nhi', 'cancel')
+    followed by other words, and it is NOT classified as a pure discard,
+    returns the remaining text. Otherwise returns ''.
+    """
+    text_clean = text.strip()
+    match = re.match(r"^(no|nahi|nhi|na|naa|nah|nope|cancel)[\s,.:;!_-]+(?P<rest>.+)$", text_clean, re.IGNORECASE)
+    if match:
+        rest = match.group("rest").strip()
+        if rest and re.search(r"[a-zA-Z0-9]", rest):
+            return rest
+    return ""
+
 
 
 def _normalize_order_product_name(name: str) -> str:
@@ -185,15 +269,11 @@ def _pending_cart_add_parse(user_message: str) -> list[dict]:
 def _format_previous_cart(state: dict) -> str:
     items = state.get("previous_cart", []) or state.get("cart", [])
     total = state.get("previous_cart_total", 0.0) or state.get("cart_total", 0.0)
-    customer_name = state.get("customer_name", "").strip()
 
     if not items:
         return "Your previous cart is empty. Would you like to start shopping?"
 
-    lines = [f"Hi {customer_name}," if customer_name else "Here are your previous cart details:"]
-    if customer_name:
-        lines.append("")
-        lines.append("Here are your previous cart details:")
+    lines = ["Here are your previous cart details:"]
     for item in items:
         product_name = item.get("matched_product_name") or item.get("input_product") or "Item"
         qty = item.get("requested_qty", 1)
@@ -222,28 +302,40 @@ def _format_cart_summary(cart_data: dict, customer_name: str) -> str:
     if not items:
         return "Sorry, your cart looks empty. Please try again."
 
-    lines = [f"Hi {customer_name}," if customer_name else "Here's your cart summary:"]
-    if customer_name:
-        lines.append("")
-        lines.append("Here's your cart summary:")
-
+    lines = ["Here are the details:"]
+    
+    has_insufficient = False
     for item in items:
         if item.get("status") == "not_found":
             continue
         product_name = item.get("matched_product_name") or item.get("input_product") or "Item"
-        qty = item.get("requested_qty", 1)
+        qty = item.get("requested_qty") or item.get("requested_units") or 1
         pack_type = item.get("pack_type", "CTN")
         total_price = _format_currency(item.get("total_price", 0))
-        lines.append(f"{product_name} — {qty} {pack_type} — AED {total_price}")
+        
+        is_error = item.get("status") == "error" or "insufficient" in str(item.get("message", "")).lower()
+        if is_error:
+            has_insufficient = True
+            lines.append(f"{product_name} — {qty} {pack_type} — AED {total_price} ⚠️ (Insufficient Stock)")
+        else:
+            lines.append(f"{product_name} — {qty} {pack_type} — AED {total_price}")
 
     lines.append("")
     lines.append(f"Grand Total: AED {_format_currency(cart_total)}")
     lines.append("")
-    lines.append("✅ Reply YES to confirm or CANCEL to discard.")
+
+    if has_insufficient:
+        lines.append("⚠️ *Note*: For items with insufficient stock, our team will call you.")
+        lines.append("")
+
+    closing = "Should I confirm this?"
+    lines.append(closing)
+
     return "\n".join(lines)
 
 
-def _format_confirm_order_reply(order_result: dict, customer_name: str) -> str:
+
+def _format_confirm_order_reply(order_result: dict, customer_name: str, has_insufficient: bool = False) -> str:
     status = order_result.get("status")
     data = order_result.get("data", {})
     
@@ -251,22 +343,25 @@ def _format_confirm_order_reply(order_result: dict, customer_name: str) -> str:
         ref = data.get("order_reference") or data.get("id_order") or order_result.get("reference") or order_result.get("order_id", "")
         invoice_link = data.get("invoice_link")
         
-        name_prefix = f"Hi {customer_name},\n\n" if customer_name else ""
         ref_line = f"📦 Order Ref # *{ref}*\n" if ref else ""
         link_line = f"📄 Invoice: {invoice_link}\n" if invoice_link else ""
         
+        note_line = ""
+        if has_insufficient:
+            note_line = "\n⚠️ *Note*: For items with insufficient stock, our team will call you.\n"
+        
         return (
-            f"{name_prefix}Your order has been placed successfully. 🎉\n\n"
+            f"Your order has been placed successfully. 🎉\n\n"
             f"{ref_line}"
-            f"{link_line}\n"
+            f"{link_line}"
+            f"{note_line}\n"
             "Our team will process it shortly. 🚚\n"
             "Feel free to ask anything else! 😊"
         ).strip()
 
     message = order_result.get("message") or "Please contact our team or try again."
-    name_prefix = f"Hi {customer_name},\n\n" if customer_name else ""
     return (
-        f"{name_prefix}Sorry, I couldn't confirm the order right now.\n"
+        f"Sorry, I couldn't confirm the order right now.\n"
         f"{message}"
     ).strip()
 
@@ -302,10 +397,24 @@ def _parsed_to_api_products(parsed_products: list[dict]) -> list[dict]:
     for item in parsed_products:
         unit = item.get("unit", "ctn")
         pack_type = 1 if unit == "ctn" else 0
+        
+        # Check if quantity or name represents 1/2 or half
+        qty_val = item.get("quantity", 1)
+        name_val = item.get("name", "").lower()
+        
+        is_half = 0
+        # Check quantity (float, integer, or string representations)
+        if qty_val == 0.5 or str(qty_val).strip() in {"0.5", "1/2", "half"}:
+            is_half = 1
+        # Check name for "1/2" or "half"
+        elif "1/2" in name_val or "half" in name_val:
+            is_half = 1
+            
         api_products.append({
-            "product_name": item.get("name", "").lower(),
-            "qty": item.get("quantity", 1),
+            "product_name": name_val,
+            "qty": qty_val,
             "pack_type": pack_type,
+            "is_half_param": is_half,
         })
     return api_products
 
@@ -328,6 +437,9 @@ def _validate_and_format_cart(parsed_products: list[dict], sender: str, state: d
     state["cart_total"] = cart_total
     state["cart_session_id"] = cart_session_id
     state["stage"] = "awaiting_confirm"
+    
+    import time
+    state["cart_updated_at"] = time.time()
 
     customer_name = cart_data.get("customer_name", state.get("customer_name", ""))
     state["customer_name"] = customer_name
@@ -357,16 +469,27 @@ def _match_product_name(target: str, existing_name: str) -> bool:
     existing_norm = _normalize_order_product_name(existing_name)
     if not target_norm or not existing_norm:
         return False
+
+    # Extract any numeric values (sizes, quantities, weights) to prevent variant mismatches
+    target_numbers = set(re.findall(r"\d+(?:\.\d+)?", target_norm))
+    existing_numbers = set(re.findall(r"\d+(?:\.\d+)?", existing_norm))
+    if target_numbers and not target_numbers.issubset(existing_numbers):
+        return False
+
     if target_norm == existing_norm:
         return True
     if target_norm in existing_norm or existing_norm in target_norm:
         return True
+
     target_tokens = set(re.findall(r"[a-z]+", target_norm))
     existing_tokens = set(re.findall(r"[a-z]+", existing_norm))
-    if target_tokens and target_tokens.issubset(existing_tokens):
-        return True
-    # Loose fallback (e.g., if user says "fries" and existing is "french fries")
-    return bool(target_tokens & existing_tokens)
+    
+    if not target_tokens or not existing_tokens:
+        return False
+        
+    # Must be a subset in either direction (hierarchical matching) to prevent loose token sharing false positives
+    return target_tokens.issubset(existing_tokens) or existing_tokens.issubset(target_tokens)
+
 
 
 def _merge_cart_products(existing_products: list[dict], updated_products: list[dict]) -> list[dict]:
@@ -513,20 +636,7 @@ general_chain  = _build_chain(GENERAL_REPLY_PROMPT, llm)
 # ─────────────────────────────────────────────────────────────────────
 
 def handle_greeting(state: dict, sender: str) -> str:
-    customer_name = state.get("customer_name", "")
-    if not customer_name:
-        try:
-            raw = search_products.invoke({
-                "product_name": "",
-                "sender_number": sender,
-            })
-            data = _safe_json(raw, {})
-            customer_name = data.get("customer_name", "")
-            state["customer_name"] = customer_name
-        except Exception:
-            pass
-
-    reply = greeting_chain.invoke({"customer_name": customer_name})
+    reply = greeting_chain.invoke({"customer_name": ""})
     return reply if isinstance(reply, str) else reply.content
 
 
@@ -555,7 +665,7 @@ def handle_product_lookup(state: dict, sender: str, intent: dict) -> str:
     products_json = json.dumps(products)
 
     reply = product_chain.invoke({
-        "customer_name": customer_name,
+        "customer_name": "",
         "search_query":  product_name,
         "intent":        intent.get("intent", "price_check"),
         "products_json": products_json,
@@ -651,8 +761,15 @@ def handle_confirm_order(state: dict, sender: str) -> tuple[str, dict]:
     print(f"\n[PLACE ORDER RAW RESPONSE] {raw_result}\n")
     order_result = _safe_json(raw_result, {})
 
+    cart_items = state.get("cart", [])
+    has_insufficient = False
+    for item in cart_items:
+        if item.get("status") == "error" or "insufficient" in str(item.get("message", "")).lower():
+            has_insufficient = True
+            break
+
     customer_name = state.get("customer_name", "")
-    reply = _format_confirm_order_reply(order_result, customer_name)
+    reply = _format_confirm_order_reply(order_result, customer_name, has_insufficient=has_insufficient)
 
     state["previous_cart"] = state.get("cart", [])
     state["previous_cart_total"] = state.get("cart_total", 0.0)
@@ -662,6 +779,7 @@ def handle_confirm_order(state: dict, sender: str) -> tuple[str, dict]:
     state = clear_cart(state)
     state["stage"] = "idle"
     state.pop("cart_session_id", None)
+    state.pop("cart_updated_at", None)
 
     return reply, state
 
@@ -672,6 +790,8 @@ def handle_confirm_order(state: dict, sender: str) -> tuple[str, dict]:
 
 def handle_cancel_order(state: dict) -> tuple[str, dict]:
     state = clear_cart(state)
+    state.pop("cart_session_id", None)
+    state.pop("cart_updated_at", None)
     reply = "No worries! Your cart has been cleared. 😊 Let me know when you're ready to order!"
     return reply, state
 
@@ -754,8 +874,115 @@ def process_message(user_input: str, sender_number: str) -> str:
     Entry point. Classifies → dispatches → formats reply.
     Persists state to Redis.
     """
+    # ── Check for empty input ──
+    if not user_input or not user_input.strip():
+        print(f"[EMPTY MSG] Dropping empty message from {sender_number}.")
+        return ""
+
     number_key = clean_number(sender_number)
     state      = get_session(number_key)
+    original_input = user_input
+
+
+    # ── Call Request Shortcut ──
+    user_trimmed = user_input.strip().lower()
+    user_normalized = re.sub(r"\s+", " ", user_trimmed)
+    
+    call_patterns = [
+        r"^plis\s+call$",
+        r"^pls\s+call$",
+        r"^please\s+call$",
+        r"^call\s+me$",
+        r"^call$",
+        r"^call\s+back$",
+        r"^call\s+kro$",
+        r"^call\s+please$",
+        r"^please\s+call\s+me$",
+        r"^plis\s+call\s+me$",
+        r"^pls\s+call\s+me$",
+        r"^contact\s+me$",
+        r"^call\s+please\s+me$",
+        r"^plis\s+call\s+please$",
+        r"^pls\s+call\s+please$",
+    ]
+    
+    is_call_req = any(re.match(pat, user_normalized) for pat in call_patterns) or (
+        "call" in user_normalized and ("please" in user_normalized or "plis" in user_normalized or "pls" in user_normalized or "me" in user_normalized or "back" in user_normalized)
+        and not any(neg in user_normalized for neg in ("don't", "dont", "do not", "no call", "no need call"))
+    )
+    
+    if is_call_req:
+        import random
+        call_phrases = [
+            "give me 2 min, calling you. 😊",
+            "Just 2 minutes, calling you. 📞",
+            "Give me a moment, calling you in 2 mins. 😊",
+            "Calling you in 2 minutes! 😊",
+            "Hold on for 2 mins, calling you. 📞",
+            "Okay, calling you in 2 minutes. 😊",
+        ]
+        reply = random.choice(call_phrases)
+        
+        customer_name_str = state.get("customer_name", "")
+        if not customer_name_str:
+            try:
+                raw = search_products.invoke({
+                    "product_name": "",
+                    "sender_number": sender_number,
+                })
+                data = _safe_json(raw, {})
+                customer_name_str = data.get("customer_name", "")
+                if customer_name_str:
+                    state["customer_name"] = customer_name_str
+            except Exception:
+                pass
+            
+        try:
+            from tools.presta_tools import create_ticket
+            create_ticket.invoke({
+                "sender_number": sender_number,
+                "customer_name": customer_name_str or "Customer",
+                "description": f"Customer requested a call back: '{user_input}'",
+                "priority": "medium"
+            })
+        except Exception as e:
+            print(f"[CALL TICKET ERROR] {e}")
+            
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    # ── Cart Expiration Check ──
+    import time
+    cart_updated_at = state.get("cart_updated_at")
+    if cart_updated_at and (time.time() - cart_updated_at > CART_EXPIRATION_MINUTES * 60):
+        print(f"[CART EXPIRED] Cart was inactive for {time.time() - cart_updated_at:.1f} seconds (limit: {CART_EXPIRATION_MINUTES} mins). Clearing cart.")
+        state = clear_cart(state)
+        state.pop("cart_updated_at", None)
+        state.pop("cart_session_id", None)
+
+    # ── Check Customer Authentication ──
+    customer_name = state.get("customer_name", "")
+    if not customer_name:
+        try:
+            raw = search_products.invoke({
+                "product_name": "",
+                "sender_number": sender_number,
+            })
+            data = _safe_json(raw, {})
+            customer_name = data.get("customer_name", "")
+            if customer_name:
+                state["customer_name"] = customer_name
+                save_session(number_key, state)
+        except Exception:
+            pass
+
+    # If customer is still not found, silently drop the message.
+    if not customer_name:
+        print(f"[AUTH FAILED] No customer found for {sender_number}. Dropping message.")
+        return ""
+
 
     # ── Stage override: if awaiting_confirm, intercept YES/NO ──
     user_lower = user_input.lower().strip()
@@ -763,7 +990,7 @@ def process_message(user_input: str, sender_number: str) -> str:
 
     if "previous cart" in user_lower or "last cart" in user_lower or "cart details" in user_lower:
         reply = _format_previous_cart(state)
-        state = append_history(state, "human", user_input)
+        state = append_history(state, "human", original_input)
         state = append_history(state, "assistant", reply)
         save_session(number_key, state)
         return reply
@@ -778,7 +1005,7 @@ def process_message(user_input: str, sender_number: str) -> str:
             reply, state = handle_cart_update_products(state, sender_number, pending_products)
         else:
             reply, state = _validate_and_format_cart(pending_products, sender_number, state)
-        state = append_history(state, "human", user_input)
+        state = append_history(state, "human", original_input)
         state = append_history(state, "assistant", reply)
         save_session(number_key, state)
         return reply
@@ -805,13 +1032,13 @@ def process_message(user_input: str, sender_number: str) -> str:
                 else:
                     reply = f"I couldn't find order #{order_id}."
                     
-                state = append_history(state, "human", user_input)
+                state = append_history(state, "human", original_input)
                 state = append_history(state, "assistant", reply)
                 save_session(number_key, state)
                 return reply
             else:
                 reply = "Please reply with a valid number from the list."
-                state = append_history(state, "human", user_input)
+                state = append_history(state, "human", original_input)
                 state = append_history(state, "assistant", reply)
                 save_session(number_key, state)
                 return reply
@@ -821,26 +1048,43 @@ def process_message(user_input: str, sender_number: str) -> str:
             state["pending_orders"] = []
 
     if stage == "awaiting_confirm":
-        if user_lower in YES_WORDS or user_lower.startswith("yes"):
+        if _is_yes_confirmation(user_input):
             reply, state = handle_confirm_order(state, sender_number)
-            state = append_history(state, "human", user_input)
+            state = append_history(state, "human", original_input)
             state = append_history(state, "assistant", reply)
             save_session(number_key, state)
             return reply
 
-        if _extract_removed_product_name(user_input):
-            reply, state = handle_cart_remove(state, sender_number, user_input)
-            state = append_history(state, "human", user_input)
-            state = append_history(state, "assistant", reply)
-            save_session(number_key, state)
-            return reply
+        target_remove = _extract_removed_product_name(user_input)
+        if target_remove:
+            existing_products = _state_cart_to_parsed_products(state)
+            has_match = any(_match_product_name(target_remove, item.get("name", "")) for item in existing_products)
+            if has_match:
+                reply, state = handle_cart_remove(state, sender_number, user_input)
+                state = append_history(state, "human", original_input)
+                state = append_history(state, "assistant", reply)
+                save_session(number_key, state)
+                return reply
 
-        if user_lower in NO_WORDS:
+        rest_msg = _extract_negated_replacement(user_input)
+        if rest_msg and not _is_no_discard(user_input):
+            print(f"[NEGATED REPLACEMENT] Original: '{user_input}', Rest: '{rest_msg}'. Clearing cart.")
+            state = clear_cart(state)
+            state.pop("cart_session_id", None)
+            state.pop("cart_updated_at", None)
+            state["stage"] = "idle"
+            stage = "idle"
+            user_input = rest_msg
+            user_trimmed = user_input.strip().lower()
+            user_lower = user_input.lower().strip()
+
+        if _is_no_discard(user_input):
             reply, state = handle_cancel_order(state)
-            state = append_history(state, "human", user_input)
+            state = append_history(state, "human", original_input)
             state = append_history(state, "assistant", reply)
             save_session(number_key, state)
             return reply
+
 
     # ── Greeting shortcut (before LLM classify) ──
     GREET_WORDS = {"hi","hello","hey","hii","helo","salam","assalam","good morning","good evening","good afternoon"}
@@ -854,7 +1098,7 @@ def process_message(user_input: str, sender_number: str) -> str:
     )
     if is_greeting_only:
         reply = handle_greeting(state, sender_number)
-        state = append_history(state, "human", user_input)
+        state = append_history(state, "human", original_input)
         state = append_history(state, "assistant", reply)
         save_session(number_key, state)
         return reply
@@ -862,7 +1106,7 @@ def process_message(user_input: str, sender_number: str) -> str:
     # ── Multi-order shortcut (before LLM classify, saves a round-trip) ──
     if stage != "awaiting_confirm" and _multi_order_check(user_input):
         reply, state = handle_multi_order(state, sender_number, user_input)
-        state = append_history(state, "human", user_input)
+        state = append_history(state, "human", original_input)
         state = append_history(state, "assistant", reply)
         save_session(number_key, state)
         return reply
@@ -878,6 +1122,13 @@ def process_message(user_input: str, sender_number: str) -> str:
     intent     = _safe_json(raw_intent, {"intent": "general", "general_reply": "How can I help? 😊"})
 
     print(f"\n[INTENT] {json.dumps(intent, indent=2)}")
+
+    # ── Language Validation ──
+    detected_language = str(intent.get("detected_language", "english")).lower().strip()
+    SUPPORTED_LANGUAGES = {"english", "arabic", "hindi", "mixed"}
+    if detected_language not in SUPPORTED_LANGUAGES:
+        print(f"[LANGUAGE BLOCKED] Detected language '{detected_language}' is not supported. Dropping message.")
+        return ""
 
     # Carry-over last_product if intent left it empty
     if not intent.get("product_name") and state.get("last_product"):
@@ -987,7 +1238,7 @@ def process_message(user_input: str, sender_number: str) -> str:
             reply = intent.get("general_reply", "How can I help? 😊")
 
     # ── Persist ──
-    state = append_history(state, "human", user_input)
+    state = append_history(state, "human", original_input)
     state = append_history(state, "assistant", reply)
     save_session(number_key, state)
 
