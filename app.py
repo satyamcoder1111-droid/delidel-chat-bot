@@ -210,7 +210,7 @@ def receive_webhook():
 
         # 4. Send via CRM
         # if reply:
-            send_reply_via_crm(sender, reply)
+        send_reply_via_crm(sender, reply)
 
     except Exception as e:
         print(f"[WEBHOOK ERROR] {e}")
