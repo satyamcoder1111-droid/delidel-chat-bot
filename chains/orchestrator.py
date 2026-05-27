@@ -70,6 +70,22 @@ def _safe_json(text: str, fallback):
         return fallback
 
 
+def _is_greeting_only(text: str) -> bool:
+    text_clean = re.sub(r"\s+", " ", text.lower().strip())
+    greet_words = {
+        "hi", "hello", "hey", "hii", "helo", "salam", "assalam",
+        "good morning", "good evening", "good afternoon",
+    }
+    order_keywords = {
+        "deliver", "order", "send", "box", "ctn", "ctns", "carton", "pcs", "kg",
+        "price", "rate", "cost", "available", "stock", "want", "need",
+    }
+    return (
+        any(text_clean == greet or text_clean.startswith(greet + " ") for greet in greet_words)
+        and not any(keyword in text_clean for keyword in order_keywords)
+    )
+
+
 def _is_yes_confirmation(text: str) -> bool:
     text_clean = re.sub(r"[^\w\s]", "", text.lower().strip())
     tokens = text_clean.split()
@@ -978,9 +994,16 @@ def process_message(user_input: str, sender_number: str) -> str:
         except Exception:
             pass
 
-    # If customer is still not found, silently drop the message.
+    # If customer is still not found, only answer simple greetings.
     if not customer_name:
-        print(f"[AUTH FAILED] No customer found for {sender_number}. Dropping message.")
+        if _is_greeting_only(user_input):
+            reply = "Hi! I'm the Delidel Assistant. Let me know how I can help you with orders, prices, or availability today."
+            state = append_history(state, "human", original_input)
+            state = append_history(state, "assistant", reply)
+            save_session(number_key, state)
+            return reply
+
+        print(f"[AUTH FAILED] No customer found for {sender_number}. Dropping non-greeting message.")
         return ""
 
 
@@ -1087,16 +1110,7 @@ def process_message(user_input: str, sender_number: str) -> str:
 
 
     # ── Greeting shortcut (before LLM classify) ──
-    GREET_WORDS = {"hi","hello","hey","hii","helo","salam","assalam","good morning","good evening","good afternoon"}
-    ORDER_KEYWORDS = {
-        "deliver","order","send","box","ctn","ctns","carton","pcs","kg",
-        "price","rate","cost","available","stock","want","need"
-    }
-    is_greeting_only = (
-        any(user_lower == g or user_lower.startswith(g + " ") for g in GREET_WORDS)
-        and not any(kw in user_lower for kw in ORDER_KEYWORDS)
-    )
-    if is_greeting_only:
+    if _is_greeting_only(user_input):
         reply = handle_greeting(state, sender_number)
         state = append_history(state, "human", original_input)
         state = append_history(state, "assistant", reply)
