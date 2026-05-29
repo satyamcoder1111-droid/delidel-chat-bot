@@ -1,0 +1,522 @@
+"Product ID";Image;Name;Reference;Category;"Price (tax excl.)";"Price (tax incl.)";Quantity;Status;Position
+1901220001;https://uae.delidel.in/1/french-fries-pg-6mm-coated-25kg.jpg;"French Fries PG 6mm coated 2.5kg";;"French Fries & Specialities";21.000000;22.05;14;0
+1901220002;https://uae.delidel.in/2/french-fries-pg-9mm-coated-25kg.jpg;"French Fries PG 9mm coated 2.5kg";;"French Fries & Specialities";20.250000;21.26;4636;0
+1901220007;https://uae.delidel.in/7/french-fries-sf-9mm-uncoated-1kg.jpg;"French Fries SF 9mm uncoated 1Kg";;"French Fries & Specialities";6.500000;6.83;10;0
+1901220008;https://uae.delidel.in/8/french-fries-sf-6mm-coated-25kg.jpg;"French Fries SF 6mm coated 2.5kg";;"French Fries & Specialities";19.000000;19.95;32;0
+1901220012;https://uae.delidel.in/12/french-fries-pg-crinkle-cut-25kg.jpg;"French Fries PG Crinkle Cut 2.5kg";;"French Fries & Specialities";17.250000;18.11;135;0
+1901220014;https://uae.delidel.in/14/potato-wedges-pg-spicy-coated-25kg.jpg;"Potato Wedges PG Spicy coated 2.5kg";;"French Fries & Specialities";26.500000;27.83;392;0
+1901220018;https://uae.delidel.in/18/potato-pockets-pg-cream-cheese-herbs-600gm.jpg;"Potato Pockets PG Cream Cheese & Herbs 600gm";;"French Fries & Specialities";9.375000;9.84;56;0
+1901220020;https://uae.delidel.in/20/mayonnaise-premier-gold.jpg;"Mayonnaise Premier Gold";;"Cooking Oil & Sauces";60.000000;63;1;0
+1901220021;https://uae.delidel.in/21/mayonnaise-premier-gold-supreme.jpg;"Mayonnaise Premier Gold Supreme";;"Cooking Oil & Sauces";60.000000;63;13;0
+1901220023;https://uae.delidel.in/255/breaded-butterfly-shrimps-rjs.jpg;"Breaded Butterfly Shrimps RJS";;"Frozen Seafood";38.000000;39.9;2272;0
+1901220025;https://uae.delidel.in/24/basa-fish-fillet-rjs-3-pcs.jpg;"Basa Fish Fillet RJS 3 Pcs";;"Frozen Seafood";22.500000;23.63;129;0
+1901220026;https://uae.delidel.in/25/basa-fish-fillet-rjs-4-pcs.jpg;"Basa Fish Fillet RJS 4 Pcs";;"Frozen Seafood";22.500000;23.63;55;0
+1901220027;https://uae.delidel.in/26/basa-fish-fillet-rjs-5-pcs.jpg;"Basa Fish Fillet RJS 5 Pcs";;"Frozen Seafood";22.500000;23.63;62;0
+1901220041;https://uae.delidel.in/36/chicken-cajun-artic-gold-1kg.jpg;"Chicken Cajun Artic Gold 1kg";;Delicacies;39.500000;41.48;50;0
+1901220042;https://uae.delidel.in/37/chicken-burger-artic-gold-100-gm.jpg;"Chicken Burger Artic Gold 100 gm";;Delicacies;22.000000;23.1;182;0
+1901220043;https://uae.delidel.in/38/beef-burger-al-areesh-100-gm.jpg;"Beef Burger Al Areesh 100 gm";;Delicacies;21.000000;22.05;98;0
+1901220044;https://uae.delidel.in/39/beef-kabab-al-areesh-1kg.jpg;"Beef Kabab Al Areesh 1kg";;Delicacies;21.500000;22.58;70;0
+1901220047;https://uae.delidel.in/42/chicken-sheesh-kebab-catering-al-areesh-1-kg.jpg;"Chicken Sheesh Kebab Catering Al Areesh 1 Kg";;Delicacies;24.000000;25.2;34;0
+1901220049;https://uae.delidel.in/44/chicken-nuggets-plain-yellow-al-areesh-1kg.jpg;"Chicken Nuggets Plain Yellow Al Areesh 1kg";;Delicacies;27.500000;28.88;228;0
+1901220051;https://uae.delidel.in/46/chicken-tawook-ai-areesh-1kg.jpg;"Chicken Tawook AI Areesh 1kg";;Delicacies;29.750000;31.24;46;0
+1901220052;https://uae.delidel.in/47/chicken-tikka-al-areesh-1kg.jpg;"Chicken Tikka Al Areesh 1kg";;Delicacies;29.750000;31.24;222;0
+1901220053;https://uae.delidel.in/48/chicken-zing-popcorn-ai-areesh-1kg.jpg;"Chicken Zing Popcorn AI Areesh 1kg";;Delicacies;37.500000;39.38;92;0
+1901220054;https://uae.delidel.in/49/tasty-chicken-burger-al-areesh-17256.jpg;"Tasty Chicken Burger Al Areesh 1/72/56";;Delicacies;58.000000;60.9;42;0
+1901220056;https://uae.delidel.in/51/fantasy-chicken-zing-al-areesh-1kg.jpg;"Fantasy Chicken Zing Al Areesh 1kg";;Delicacies;33.000000;34.65;64;0
+1901220065;https://uae.delidel.in/60/bobby-veal-900gm-al-kamil.jpg;"Bobby Veal 900gm Al Kamil";;"Frozen Meat";19.000000;19.95;406;0
+1901220066;https://uae.delidel.in/61/veal-leg-al-kamil-45kg.jpg;"Veal Leg Al Kamil 4.5kg";;"Frozen Meat";112.000000;117.6;84;0
+1901220067;https://uae.delidel.in/62/beef-slices-al-kamil-900gm.jpg;"Beef Slices Al Kamil-900Gm";;"Frozen Meat";19.000000;19.95;392;0
+1901220068;https://uae.delidel.in/63/herman-mayonnaise-gallon-pack-378-litres.jpg;"Herman Mayonnaise Gallon pack 3.78 Litres";;"Cooking Oil & Sauces";22.000000;23.1;214;0
+1901220076;https://uae.delidel.in/67/herman-ketchup-rich-sachet-1000x9-gm.jpg;"Herman Ketchup Rich Sachet 1000x9 gm";;"Cooking Oil & Sauces";49.000000;51.45;25;0
+1901220077;https://uae.delidel.in/68/herman-ketchup-rich-5kg-gallon-pack.jpg;"Herman Ketchup Rich 5Kg Gallon pack";;"Cooking Oil & Sauces";19.000000;19.95;98;0
+1901220078;https://uae.delidel.in/69/herman-hot-sauce-88ml-glass.jpg;"Herman Hot Sauce 88ml Glass";;"Cooking Oil & Sauces";1.000000;1.05;231;0
+1901220079;https://uae.delidel.in/70/herman-mayonnaise-light-sachet-1000x10gms.jpg;"Herman Mayonnaise Light Sachet 1000x10gms";;"Cooking Oil & Sauces";60.000000;63;11;0
+1901220082;https://uae.delidel.in/72/chicken-franks-400-gm-doux.jpg;"Chicken Franks 400 gm Doux";;"Frozen Chicken";5.000000;5.25;7;0
+1901220083;https://uae.delidel.in/73/chicken-franks-400-gm-rose.jpg;"Chicken Franks 400 gm Rose";;"Frozen Chicken";4.458333;4.68;7;0
+1901220085;https://uae.delidel.in/75/chicken-tikka-ai-kabeer-1kg.jpg;"Chicken Tikka AI Kabeer 1kg";;Delicacies;36.000000;37.8;76;0
+1901220086;https://uae.delidel.in/76/chicken-shish-tawook-ai-kabeer-1kg.jpg;"Chicken Shish Tawook AI Kabeer 1kg";;Delicacies;32.000000;33.6;21;0
+1901220089;https://uae.delidel.in/79/zinker-chicken-fillet-1kg-americana.jpg;"Zinker Chicken Fillet 1kg Americana";;Delicacies;27.000000;28.35;255;0
+1901220090;https://uae.delidel.in/80/veg-burger-alkabeer-1kg.jpg;"Veg Burger AlKabeer 1kg";;Delicacies;25.000000;26.25;34;0
+1901220095;https://uae.delidel.in/271/chicken-burger-breaded-al-areesh-75-gm.jpg;"Chicken Burger Breaded Al Areesh 75 gm";;Delicacies;24.000000;25.2;116;0
+1901220096;https://uae.delidel.in/86/zinger-chicken-strip-1kg.jpg;"Zinger Chicken Strip 1kg";;Delicacies;26.000000;27.3;302;0
+1901220098;https://uae.delidel.in/357/beef-burger-50gm-al-kabeer-2kg.jpg;"Beef Burger 50gm Al Kabeer 2kg";;Delicacies;38.000000;39.9;28;0
+1901220101;https://uae.delidel.in/91/chicken-burger-sadia-144-units-56-gms.jpg;"Chicken Burger Sadia 144 units 56 gms";;Delicacies;102.000000;107.1;35;0
+1901220102;https://uae.delidel.in/92/chicken-breast-aurora-2kg.jpg;"Chicken Breast Aurora 2kg";;"Frozen Chicken";32.500000;34.13;562;0
+1901220103;https://uae.delidel.in/385/chicken-breast-sadia-25kg.jpg;"Chicken Breast Sadia 2.5kg";;"Frozen Chicken";40.000000;42;201;0
+1901220106;https://uae.delidel.in/96/mozzarella-cheese-puck-2kg.jpg;"Mozzarella Cheese PUCK 2kg";;"Dairy Products";54.500000;57.23;53;0
+1901220107;https://uae.delidel.in/97/jumbo-prawns-crispy-gulf-seafood.jpg;"Jumbo Prawns Crispy Gulf SeaFood";;"Frozen Seafood";16.000000;16.8;33;0
+1901220108;https://uae.delidel.in/98/iqf-pud-shrimp-4060-gulf-seafood-1kg.jpg;"IQF PUD Shrimp 40/60 Gulf SeaFood 1kg";;"Frozen Seafood";18.000000;18.9;278;0
+1901220111;https://uae.delidel.in/101/iqf-shrimp-pud60-80-gsf.jpg;"IQF SHRIMP PUD60/80 GSF";;"Frozen Seafood";16.000000;16.8;122;0
+1901220112;https://uae.delidel.in/102/iqf-peeled-cooking-shrimp-c1-gsf.jpg;"IQF PEELED COOKING SHRIMP C1 GSF";;"Frozen Seafood";15.500000;16.28;30;0
+1901220113;https://uae.delidel.in/103/frozen-squid-u10-gsf.jpg;"Frozen Squid U10 GSF";;"Frozen Seafood";17.500000;18.38;301;0
+1901220115;https://uae.delidel.in/104/iqf-pd-shrimp-30-40-gulf-seafood-1kg.jpg;"IQF PD Shrimp 30/40 Gulf SeaFood 1kg";;"Frozen Seafood";20.000000;21;103;0
+1901220121;https://uae.delidel.in/108/ketchup-hayat-gallon-5kg.jpg;"Ketchup Hayat Gallon 5kg";;"Cooking Oil & Sauces";22.000000;23.1;232;0
+1901220124;https://uae.delidel.in/111/hayat-mayonnaise-gallon-pack.jpg;"Hayat Mayonnaise Gallon pack";;"Cooking Oil & Sauces";18.000000;18.9;50;0
+1901220125;https://uae.delidel.in/112/ketchup-kimball-glass-bottle-325gm.jpg;"Ketchup Kimball Glass Bottle 325Gm";;"Cooking Oil & Sauces";9.000000;9.45;79;0
+1901220127;https://uae.delidel.in/114/mayonnaise-american-garden-gallon-pack.jpg;"Mayonnaise American Garden Gallon Pack";;"Cooking Oil & Sauces";70.000000;73.5;588;0
+1901220129;https://uae.delidel.in/116/lamb-weston-seasoned-twister-25kg.jpg;"Lamb Weston seasoned twister 2.5kg";;"French Fries & Specialities";31.000000;32.55;122;0
+1901220130;https://uae.delidel.in/117/pale-slice-on-slice-cheese-anchor-129-kg.jpg;"Pale slice on slice cheese Anchor 1.29 kg";;"Dairy Products";42.500000;44.63;368;0
+1901220133;https://uae.delidel.in/698/chicken-spring-roll-al-kabeer.jpg;"Chicken Spring Roll Al Kabeer";;Delicacies;34.000000;35.7;34;0
+1901220134;https://uae.delidel.in/121/veg-spring-roll-al-kabeer.jpg;"Veg Spring Roll Al Kabeer";;Delicacies;27.000000;28.35;74;0
+1901220136;https://uae.delidel.in/123/grillers-seara-1100gm.jpg;"Grillers Seara 1100gm";;"Frozen Chicken";14.300000;15.02;5632;0
+1901220137;https://uae.delidel.in/124/grillers-seara-1200gm.jpg;"Grillers SEARA 1200gm";;"Frozen Chicken";15.000000;15.75;112;0
+1901220145;https://uae.delidel.in/132/seasoned-skin-on-wedges-lamb-weston.jpg;"Seasoned Skin On Wedges Lamb Weston";;"French Fries & Specialities";26.500000;27.83;49;0
+1901220147;https://uae.delidel.in/134/shawarma-nat.jpg;"Shawarma Nat";;"Frozen Chicken";36.250000;38.06;16;0
+1901220148;https://uae.delidel.in/289/grillers-seara-900gm.jpg;"Grillers Seara 900gm";;"Frozen Chicken";13.500000;14.18;556;0
+1901220152;https://uae.delidel.in/1585/chicken-burgers-al-kabeer-50gm-52kg.jpg;"Chicken Burgers Al Kabeer 50gm 5*2kg";;Delicacies;36.500000;38.33;74;0
+1901220156;https://uae.delidel.in/143/chicken-leg-quarter.jpg;"Chicken Leg Quarter";;"Frozen Chicken";150.000000;157.5;54;0
+1901220157;https://uae.delidel.in/258/vegetable-falafel-al-areesh-10-x-1kg.jpg;"Vegetable Falafel Al Areesh 10 X 1KG";;Delicacies;17.000000;17.85;184;0
+1901220158;https://uae.delidel.in/262/fish-burger-breaded-gsf-5-x-1-kg.jpg;"Fish Burger Breaded GSF 5 X 1 KG";;Delicacies;15.000000;15.75;31;0
+1901220167;https://uae.delidel.in/154/cappana-mayo-100010gm.jpg;"Cappana Mayo 1000*10gm";;"Cooking Oil & Sauces";60.000000;63;4;0
+1901220171;https://uae.delidel.in/158/grillers-1100gm-sadia.jpg;"Grillers 1100gm Sadia";;"Frozen Chicken";16.000000;16.8;4017;0
+1901220175;https://uae.delidel.in/162/chicken-gizzard-lar-450gm-x-20.jpg;"Chicken Gizzard Lar 450gm X 20";;"Frozen Chicken";5.500000;5.78;184;0
+1901220176;https://uae.delidel.in/163/grillers-hilal-1300gm.jpg;"Grillers Hilal 1300gm";;"Frozen Chicken";15.500000;16.28;25;0
+1901220179;https://uae.delidel.in/166/grillers-perdix-1000gm.jpg;"Grillers Perdix 1000gm";;"Frozen Chicken";15.300000;16.07;1380;0
+1901220180;https://uae.delidel.in/167/grillers-hilal-1400gm.jpg;"Grillers Hilal 1400gm";;"Frozen Chicken";16.800000;17.64;37;0
+1901220181;https://uae.delidel.in/340/shawarma-perdix.jpg;"Shawarma Perdix";;"Frozen Chicken";36.000000;37.8;2;0
+1901220186;https://uae.delidel.in/173/grillers-perdix-1200gm.jpg;"Grillers Perdix 1200gm";;"Frozen Chicken";15.200000;15.96;21;0
+1901220187;https://uae.delidel.in/174/shawarma-sadia.jpg;"Shawarma Sadia";;"Frozen Chicken";37.000000;38.85;581;0
+1901220189;https://uae.delidel.in/176/grillers-hilal-1000gm.jpg;"Grillers Hilal 1000gm";;"Frozen Chicken";15.300000;16.07;324;0
+1901220192;https://uae.delidel.in/179/frozen-green-peas-natura-indian-4x25kg.jpg;"Frozen Green Peas Natura Indian 4x2.5kg";;"Fruit & Veg";14.500000;15.23;3;0
+1901220193;https://uae.delidel.in/827/frozen-mixed-vegetables-natura-indian-3-way-mix-25kg.jpg;"Frozen Mixed Vegetables Natura Indian 3 way Mix 2.5kg";;"Fruit & Veg";11.000000;11.55;4;0
+1901220202;https://uae.delidel.in/187/table-margarine-butter-mumtaz-500gm.jpg;"Table Margarine Butter Mumtaz 500gm";;"Dairy Products";6.000000;6.3;56;0
+1901220203;https://uae.delidel.in/188/table-margarine-butter-mumtaz-200gm.jpg;"Table Margarine Butter Mumtaz 200gm";;"Dairy Products";3.250000;3.41;153;0
+1901220206;https://uae.delidel.in/191/crispy-onion-rings-lamb-weston.jpg;"Crispy Onion Rings Lamb Weston";;"French Fries & Specialities";18.500000;19.43;168;0
+2401220001;https://uae.delidel.in/208/grillers-perdix-1300gm.jpg;"Grillers Perdix 1300gm";;"Frozen Chicken";15.500000;16.28;170;0
+2401220002;https://uae.delidel.in/211/grillers-hilal-1100gm.jpg;"Grillers Hilal 1100gm";;"Frozen Chicken";14.700000;15.44;35;0
+2401220003;https://uae.delidel.in/214/grillers-hilal-1200gm.jpg;"Grillers Hilal 1200gm";;"Frozen Chicken";15.200000;15.96;5;0
+2401220011;https://uae.delidel.in/217/fish-breaded-fillet-al-kabeer.jpg;"Fish Breaded Fillet Al Kabeer";;Delicacies;36.000000;37.8;31;0
+2401220018;https://uae.delidel.in/194/frozen-vegetable-samosa-50gm.jpg;"Frozen Vegetable Samosa 50gm";;Delicacies;12.000000;12.6;109;0
+2401220019;https://uae.delidel.in/195/frozen-chicken-samosa-50gm.jpg;"Frozen Chicken Samosa 50gm";;Delicacies;14.000000;14.7;17;0
+2401220028;https://uae.delidel.in/239/zing-chicken-malmal-matafi-1kg.jpg;"Zing Chicken Malmal Matafi 1kg";;Delicacies;37.500000;39.38;30;0
+2401220031;https://uae.delidel.in/241/grillers-seara-1000gm.jpg;"Grillers Seara 1000gm";;"Frozen Chicken";14.200000;14.91;3526;0
+2401220051;https://uae.delidel.in/247/grillers-1100gm-nat.jpg;"Grillers 1100gm Nat";;"Frozen Chicken";14.300000;15.02;510;0
+2401220053;https://uae.delidel.in/252/frozen-paneer-amul-1kg.jpg;"Frozen Paneer Amul 1kg";;"Dairy Products";31.000000;32.55;121;0
+2401220054;https://uae.delidel.in/347/chicken-wings-aurora-15kg.jpg;"Chicken Wings Aurora 15kg";;"Frozen Chicken";190.000000;199.5;4;0
+2401220057;https://uae.delidel.in/1024/frozen-butter-amul-500gm.jpg;"Frozen Butter Amul 500gm";;"Dairy Products";20.500000;21.53;217;0
+2401220058;https://uae.delidel.in/279/cappana-tomato-ketchup-sachet.jpg;"Cappana Tomato Ketchup Sachet";;"Cooking Oil & Sauces";48.000000;50.4;17;0
+2401220062;https://uae.delidel.in/244/shawarma-seara.jpg;"Shawarma Seara";;"Frozen Chicken";35.750000;37.54;1358;0
+2401220067;https://uae.delidel.in/825/frozen-mixed-vegetables-natura-indian-3-way-mix-400gms.jpg;"Frozen Mixed Vegetables Natura Indian 3 way Mix 400gms";;"Fruit & Veg";1.800000;1.89;16;0
+2401220069;https://uae.delidel.in/265/iqf-pd-shrimp-1620-gulf-seafood-1kg.jpg;"IQF PD Shrimp 16/20 Gulf SeaFood 1kg";;"Frozen Seafood";26.000000;27.3;150;0
+2401220074;https://uae.delidel.in/234/grillers-800gm-perdix.jpg;"Grillers 800gm Perdix";;"Frozen Chicken";12.800000;13.44;51;0
+2401220075;https://uae.delidel.in/233/grillers-nat-1000gm.jpg;"Grillers Nat 1000gm";;"Frozen Chicken";14.500000;15.23;52;0
+2401220082;https://uae.delidel.in/228/grillers-frangosul-1000gm.jpg;"Grillers Frangosul 1000gm";;"Frozen Chicken";14.000000;14.7;9;0
+2401220089;https://uae.delidel.in/341/chicken-franks-perdix-340-gm.jpg;"Chicken Franks Perdix 340 gm";;"Frozen Chicken";2.650000;2.78;209;0
+2401220091;https://uae.delidel.in/224/beef-mince-golden-fresh-400gm.jpg;"Beef Mince Golden Fresh - 400gm";;"Frozen Meat";1.950000;2.05;102;0
+2401220105;https://uae.delidel.in/882/ready-shawarma-freshly-food-1kg.jpg;"Ready Shawarma Freshly Food 1kg";;Delicacies;28.000000;29.4;548;0
+2401220122;https://uae.delidel.in/319/veg-burger-al-areesh.jpg;"Veg burger Al Areesh";;Delicacies;26.000000;27.3;60;0
+2401220152;https://uae.delidel.in/313/cappanna-mayonnaise-gallon.jpg;"Cappanna Mayonnaise Gallon";;"Cooking Oil & Sauces";20.000000;21;80;0
+2401220155;https://uae.delidel.in/335/liver-bellaves-450gm.jpg;"Liver Bellaves 450gm";;"Frozen Chicken";4.000000;4.2;231;0
+2401220156;https://uae.delidel.in/320/cappanna-ketchup-gallon.jpg;"Cappanna Ketchup Gallon";;"Cooking Oil & Sauces";16.500000;17.33;117;0
+2401220161;https://uae.delidel.in/322/chicken-tikka-al-taam-1kg.jpg;"Chicken Tikka Al Taam 1kg";;Delicacies;27.000000;28.35;246;0
+2401220163;https://uae.delidel.in/326/bobby-veal-900gm-golden-fresh.jpg;"Bobby Veal 900gm Golden Fresh";;"Frozen Meat";17.500000;18.38;317;0
+2401220164;https://uae.delidel.in/334/chicken-iqf-breast-al-taam-2kg.jpg;"Chicken IQF Breast Al Taam 2kg";;"Frozen Chicken";39.000000;40.95;52;0
+2401220167;https://uae.delidel.in/329/shawarma-jagua.jpg;"Shawarma Jagua";;"Frozen Chicken";36.000000;37.8;35;0
+2401220169;https://uae.delidel.in/332/frozen-sweet-corn-country-greens-25kg.jpg;"Frozen Sweet Corn Country Greens 2.5kg";;"Fruit & Veg";13.000000;13.65;9;0
+2401220185;https://uae.delidel.in/353/mozzarella-shredded-cheese-grande-2kg.jpg;"Mozzarella Shredded Cheese Grande 2kg";;"Dairy Products";40.000000;42;27;0
+2401220191;https://uae.delidel.in/358/beef-burger-20pc-al-kabeer-1kg-.jpg;"Beef Burger 20pc Al Kabeer 1kg";;Delicacies;22.000000;23.1;114;0
+2401220197;https://uae.delidel.in/1030/spreadable-cream-cheese-jar-puck-1100g.jpg;"Spreadable cream cheese jar Puck 1100g";;"Dairy Products";26.000000;27.3;156;0
+2401220208;https://uae.delidel.in/369/pulp-avocado-country-green-500gm.jpg;"Pulp Avocado Country Green 500gm";;"Pulp & Puree";15.500000;16.28;2;0
+2401220211;https://uae.delidel.in/367/syrup-nannari-greenroot-600ml.jpg;"Syrup Nannari Greenroot 600ml";;"Pulp & Puree";3.000000;3.15;23;0
+2401220214;https://uae.delidel.in/372/syrup-passion-fruit-vedrenne.jpg;"Syrup Passion Fruit Vedrenne";;"Pulp & Puree";48.000000;50.4;8;0
+2401220216;https://uae.delidel.in/373/syrup-strawberry-vedrenne.jpg;"Syrup Strawberry Vedrenne";;"Pulp & Puree";48.000000;50.4;24;0
+2401220222;https://uae.delidel.in/381/evaporated-tea-milk-al-mudhish-410gm.jpg;"Evaporated Tea Milk Al Mudhish 410gm";;"Dairy Products";2.583333;2.71;5859;0
+2401220228;https://uae.delidel.in/391/vegetable-oil-mabrook-17litre.jpg;"Vegetable Oil Mabrook 17litre";;"Cooking Oil & Sauces";104.000000;109.2;313;0
+2401220230;https://uae.delidel.in/392/veal-leg-al-alam-45kg.jpg;"Veal Leg Al Alam 4.5kg";;"Frozen Meat";107.000000;112.35;40;0
+2401220235;https://uae.delidel.in/400/drumstick-in-trays-big-bellaves-900gm-big.jpg;"Drumstick in Trays Big Bellaves 900gm Big";;"Frozen Chicken";10.500000;11.03;32;0
+2401220240;https://uae.delidel.in/1027/iws-white-slices-forsana-500gm.jpg;"IWS White Slices Forsana 500gm";;"Dairy Products";13.500000;14.18;281;0
+2401220246;https://uae.delidel.in/409/liver-in-trays-al-mana-450gm.jpg;"Liver in Trays Al Mana 450gm";;"Frozen Chicken";4.000000;4.2;10;0
+2401220248;https://uae.delidel.in/411/chicken-mince-golden-fresh-400gm.jpg;"Chicken Mince Golden Fresh - 400gm";;"Frozen Chicken";2.600000;2.73;393;0
+2401220253;https://uae.delidel.in/416/grillers-nat-1300gm.jpg;"Grillers Nat 1300gm";;"Frozen Chicken";15.200000;15.96;50;0
+2401220257;https://uae.delidel.in/418/egg-white-medium-30-pcs.jpg;"Egg White Medium 30 pcs";;"Frozen Chicken";13.000000;13.65;2436;0
+2401220258;https://uae.delidel.in/421/grillers-confidence-1100gm.jpg;"Grillers Confidence 1100gm";;"Frozen Chicken";14.500000;15.23;197;0
+2401220260;https://uae.delidel.in/427/frozen-tortilla-10-inch-american-classic.jpg;"Frozen Tortilla 10 inch American Classic";;"Bread & Tortilla";9.000000;9.45;353;0
+2401220273;https://uae.delidel.in/437/grillers-800gm-seara.jpg;"Grillers 800gm Seara";;"Frozen Chicken";12.700000;13.34;241;0
+2401220275;https://uae.delidel.in/442/tomato-paste-mala-800gm.jpg;"Tomato Paste Mala - 800gm";;"Cooking Oil & Sauces";4.500000;4.73;6;0
+2401220276;https://uae.delidel.in/443/tomato-paste-mala-400gm.jpg;"Tomato Paste Mala - 400gm";;"Cooking Oil & Sauces";2.250000;2.36;31;0
+2401220279;https://uae.delidel.in/491/drumstick-in-trays-sadia-900gm-small.jpg;"Drumstick in Trays Sadia 900gm (Small)";;"Frozen Chicken";12.000000;12.6;60;0
+2401220282;https://uae.delidel.in/725/chicken-gizzard-nat-450gm-x-20.jpg;"Chicken Gizzard Nat 450gm X 20";;"Frozen Chicken";5.500000;5.78;6;0
+2401220290;https://uae.delidel.in/1026/full-fat-long-life-milk-al-mudhish-1ltr.jpg;"Full Fat Long Life Milk Al Mudhish 1Ltr";;"Dairy Products";4.500000;4.73;353;0
+2401220297;https://uae.delidel.in/456/potato-pak-bag-5kg.jpg;"Potato Pak Bag 5kg";;"Fresh Vegetables";16.000000;16.8;3;0
+2401220298;https://uae.delidel.in/459/potato-pak-3kg-bag.jpg;"Potato Pak 3kg Bag";;"Fresh Vegetables";10.000000;10.5;5;0
+2401220299;https://uae.delidel.in/533/onion-red-4kg-box.jpg;"Onion Red 4kg Box";;"Fresh Vegetables";11.500000;12.08;1;0
+2401220300;https://uae.delidel.in/534/onion-10kg-box.jpg;"Onion 10kg (Box)";;"Fresh Vegetables";35.500000;37.28;3;0
+2401220322;https://uae.delidel.in/475/avocado-kenya-4kg-box.jpg;"Avocado Kenya 4kg Box";;"Fresh Fruits";39.000000;40.95;13;0
+2401220356;https://uae.delidel.in/505/garlic-bag-china-25kg.jpg;"Garlic Bag China 2.5kg";;"Fresh Vegetables";16.000000;16.8;4;0
+2401220417;https://uae.delidel.in/571/liver-in-trays-lar-450gm.jpg;"Liver in Trays LAR 450gm";;"Frozen Chicken";4.000000;4.2;13;0
+2401220435;https://uae.delidel.in/591/iws-anchor-cheese-slice-768gm.jpg;"IWS Anchor Cheese Slice 768gm";;"Dairy Products";30.000000;31.5;145;0
+2401220461;https://uae.delidel.in/614/lemon-turkey-box.jpg;"Lemon Turkey Box";;"Fresh Vegetables";89.000000;93.45;2;0
+2401220474;https://uae.delidel.in/627/vimto-cordial-700ml.jpg;"Vimto Cordial 700ml";;"Pulp & Puree";10.000000;10.5;9;0
+2401220475;https://uae.delidel.in/628/roohafza-800ml.jpg;"Roohafza 800ml";;"Pulp & Puree";12.000000;12.6;14;0
+2401220479;https://uae.delidel.in/632/donia-condensed-milk-390gm.jpg;"Donia Condensed Milk 390gm";;"Dairy Products";2.812500;2.95;1201;0
+2401220485;https://uae.delidel.in/883/chicken-lemon-freshlyfood-1kg-.jpg;"Chicken Lemon Freshlyfood 1kg";;Delicacies;27.000000;28.35;97;0
+2401220486;https://uae.delidel.in/642/pulp-tender-coconut-fruiten-1kg.jpg;"Pulp Tender Coconut Fruiten 1kg";;"Pulp & Puree";18.000000;18.9;68;0
+2401220487;https://uae.delidel.in/653/pulp-sapota-fruiten-1kg.jpg;"Pulp Sapota Fruiten 1kg";;"Pulp & Puree";15.000000;15.75;3;0
+2401220489;https://uae.delidel.in/647/pulp-guava-fruiten-1kg.jpg;"Pulp Guava Fruiten 1kg";;"Pulp & Puree";16.000000;16.8;8;0
+2401220490;https://uae.delidel.in/645/pulp-grape-fruiten-1kg.jpg;"Pulp Grape Fruiten 1kg";;"Pulp & Puree";14.000000;14.7;2;0
+2401220491;https://uae.delidel.in/646/pulp-strawberry-fruiten-1kg.jpg;"Pulp Strawberry Fruiten 1kg";;"Pulp & Puree";16.000000;16.8;5;0
+2401220492;https://uae.delidel.in/643/pulp-muskmelon-fruiten-1kg.jpg;"Pulp Muskmelon Fruiten 1kg";;"Pulp & Puree";15.000000;15.75;51;0
+2401220494;https://uae.delidel.in/881/vegetable-falafel-freshlyfood-1kg.jpg;"Vegetable Falafel Freshlyfood 1kg";;Delicacies;16.000000;16.8;120;0
+2401220515;https://uae.delidel.in/667/cucumber-25kg-box.jpg;"Cucumber 2.5kg Box";;"Fresh Vegetables";12.000000;12.6;2;0
+2401220523;https://uae.delidel.in/674/white-onion-7kg-bag.jpg;"White Onion 7kg bag";;"Fresh Vegetables";27.000000;28.35;2;0
+2401220541;https://uae.delidel.in/679/chicken-leg-boneless-copacol-2kg.jpg;"Chicken Leg Boneless Copacol 2kg";;"Frozen Chicken";36.000000;37.8;152;0
+2401220562;https://uae.delidel.in/1308/omani-chips-15gm.jpg;"Omani Chips 15gm";;"French Fries & Specialities";25.000000;26.25;14;0
+2401220566;https://uae.delidel.in/1571/sunflower-oil-4ltr.jpg;"Sunflower Oil 4ltr";;"Cooking Oil & Sauces";32.000000;33.6;8;0
+2401220568;https://uae.delidel.in/784/ginger-china-25kg-box.jpg;"Ginger China 2.5kg Box";;"Fresh Vegetables";16.000000;16.8;2;0
+2401220588;https://uae.delidel.in/694/frozen-paratha-al-taam-90gm.jpg;"Frozen Paratha Al Taam 90gm";;"Bread & Tortilla";7.000000;7.35;55;0
+2401220602;https://uae.delidel.in/697/full-fat-long-life-milk-nadec-1ltr.jpg;"Full Fat Long Life Milk Nadec 1Ltr";;"Dairy Products";3.750000;3.94;851;0
+2401220621;https://uae.delidel.in/703/grillers-seara-1400gm-.jpg;"Grillers Seara 1400gm";;"Frozen Chicken";16.200000;17.01;230;0
+2401220628;https://uae.delidel.in/707/french-fries-9mm-mayda-25kg.jpg;"French Fries 9mm Mayda 2.5kg";;"French Fries & Specialities";12.500000;13.13;168;0
+2401220640;https://uae.delidel.in/711/cooking-cream-rama-1ltr.jpg;"Cooking Cream Rama 1Ltr";;"Cooking Oil & Sauces";12.750000;13.39;108;0
+2401220677;https://uae.delidel.in/765/lime-vietnam-4kg-box.jpg;"Lime Vietnam 4kg Box";;"Fresh Vegetables";35.000000;36.75;3;0
+2401220693;https://uae.delidel.in/719/mutton-mince-golden-fresh-400gm.jpg;"Mutton Mince Golden Fresh - 400gm";;"Frozen Meat";2.000000;2.1;321;0
+2401220723;https://uae.delidel.in/739/syrup-lemon-mojito-vedrenne.jpg;"Syrup Lemon Mojito Vedrenne";;"Pulp & Puree";48.000000;50.4;4;0
+2401220724;https://uae.delidel.in/740/syrup-lemon-mint-mojito-giffard.jpg;"Syrup Lemon Mint Mojito Giffard";;"Pulp & Puree";48.000000;50.4;13;0
+2401220727;https://uae.delidel.in/746/chilli-india-4kg-box.jpg;"Chilli India 4kg Box";;"Fresh Vegetables";46.000000;48.3;3;0
+2401220740;https://uae.delidel.in/838/grillers-prim-chand-1100gm.jpg;"Grillers Prim Chand 1100gm";;"Frozen Chicken";14.300000;15.02;50;0
+2401220753;https://uae.delidel.in/815/grillers-nat-1400gm-.jpg;"Grillers Nat 1400gm";;"Frozen Chicken";16.600000;17.43;49;0
+2401220758;https://uae.delidel.in/880/chicken-nuggets-freshly-1kg-.jpg;"Chicken Nuggets Freshly 1kg";;Delicacies;17.000000;17.85;254;0
+2401220766;https://uae.delidel.in/819/spreadable-cream-cheese-jar-kraft-930gm.jpg;"Spreadable cream cheese Jar Kraft 930gm";;"Dairy Products";26.000000;27.3;52;0
+2401220770;https://uae.delidel.in/830/frozen-fresh-tapioca-malabar-700gm-.jpg;"Frozen Fresh Tapioca Malabar 700gm";;Delicacies;4.750000;4.99;412;0
+2401220794;https://uae.delidel.in/840/grillers-granja-1200gm.jpg;"Grillers Granja 1200gm";;"Frozen Chicken";14.800000;15.54;8;0
+2401220808;https://uae.delidel.in/1593/delidel-sample-product-1.jpg;"Delidel Sample Product 1";knowband;"sample products";100.000000;105;3659;0
+2401220809;https://uae.delidel.in/1594/delidel-sample-product-2.jpg;"Delidel Sample Product 2";knowband2;"sample products";100.000000;105;1477;0
+2401220810;https://uae.delidel.in/1595/delidel-sample-product-3.jpg;"Delidel Sample Product 3";knowband3;"sample products";100.000000;105;1026;0
+2401220854;https://uae.delidel.in/1745/coconut-bag-25-pcs.jpg;"Coconut Bag (25 Pcs)";;"Fresh Vegetables";26.000000;27.3;10;0
+2401220878;https://uae.delidel.in//ginger-india-25kg-bag.jpg;"Ginger India 2.5kg Bag";;"Fresh Vegetables";20.000000;21;1;0
+2401220886;https://uae.delidel.in/977/grillers-qualiko-900gm.jpg;"Grillers Qualiko 900gm";;"Frozen Chicken";13.900000;14.6;90;0
+2401220941;https://uae.delidel.in/1746/tomato-10kg-box.jpg;"Tomato 10kg Box";;"Fresh Vegetables";56.000000;58.8;2;0
+2401220957;https://uae.delidel.in/851/shawarma-confidence.jpg;"Shawarma Confidence";;"Frozen Chicken";36.500000;38.33;4;0
+2401220958;https://uae.delidel.in/852/breaded-chicken-fillet-al-kabeer-750gm.jpg;"Breaded Chicken Fillet Al Kabeer 750gm";;Delicacies;22.000000;23.1;25;0
+2401220959;https://uae.delidel.in/853/beef-slices-golden-fresh-900gm.jpg;"Beef Slices Golden Fresh 900gm";;"Frozen Meat";17.250000;18.11;433;0
+2401220960;https://uae.delidel.in/854/mutton-cubes-golden-fresh.jpg;"Mutton Cubes Golden Fresh";;"Frozen Meat";15.750000;16.54;277;0
+2401220962;https://uae.delidel.in/856/syrup-blue-curacao-vedrenne.jpg;"Syrup Blue Curacao Vedrenne";;"Pulp & Puree";48.000000;50.4;11;0
+2401220964;https://uae.delidel.in/860/chicken-wings-sadia-900gm.jpg;"Chicken Wings Sadia 900gm";;"Frozen Chicken";11.500000;12.08;120;0
+2401220974;https://uae.delidel.in/864/beef-tenderloin-kamil.jpg;"Beef Tenderloin Kamil";;"Frozen Meat";38.000000;39.9;217;0
+2401220976;https://uae.delidel.in/861/grillers-frangosul-1100gm.jpg;"Grillers Frangosul 1100gm";;"Frozen Chicken";14.600000;15.33;12;0
+2401220978;https://uae.delidel.in/865/evaporated-tea-milk-rainbow-410gm.jpg;"Evaporated Tea Milk Rainbow 410gm";;"Dairy Products";4.160000;4.37;1123;0
+2401220983;https://uae.delidel.in/889/vegetable-burger-plain-55gm-freshly.jpg;"Vegetable Burger Plain 55Gm Freshly";;Delicacies;17.000000;17.85;84;0
+2401220984;https://uae.delidel.in/888/tandoori-chicken-tikka-freshly.jpg;"Tandoori Chicken Tikka Freshly";;Delicacies;24.000000;25.2;101;0
+2401220985;https://uae.delidel.in/887/chicken-shish-tawook-freshly.jpg;"Chicken Shish Tawook Freshly";;Delicacies;22.000000;23.1;23;0
+2401220987;https://uae.delidel.in/885/chicken-zing-fillets-freshly.jpg;"Chicken Zing Fillets Freshly";;Delicacies;23.750000;24.94;13;0
+2401220988;https://uae.delidel.in/884/chicken-popcorn-freshly.jpg;"Chicken Popcorn Freshly";;Delicacies;24.500000;25.73;135;0
+2401220989;https://uae.delidel.in/879/chicken-fillets-breaded-plain-55gm-freshly.jpg;"Chicken Fillets Breaded Plain 55Gm Freshly";;Delicacies;17.500000;18.38;5;0
+2401220991;https://uae.delidel.in/877/chicken-burger-breaded-75gm-freshly.jpg;"Chicken Burger Breaded 75Gm Freshly";;Delicacies;18.000000;18.9;60;0
+2401220992;https://uae.delidel.in/876/chicken-burger-56gm-freshly.jpg;"Chicken Burger 56Gm Freshly";;Delicacies;14.000000;14.7;245;0
+2401220998;https://uae.delidel.in/875/chicken-nuggets-al-kabeer-750gm.jpg;"Chicken Nuggets Al Kabeer 750Gm";;Delicacies;22.500000;23.63;59;0
+2401221001;https://uae.delidel.in/890/chicken-breast-urussa-25kg.jpg;"Chicken Breast Urussa 2.5Kg";;"Frozen Chicken";39.000000;40.95;22;0
+2401221007;https://uae.delidel.in/897/sunflower-oil-5-ltr.jpg;"Sunflower oil 5 Ltr";;"Cooking Oil & Sauces";39.500000;41.48;100;0
+2401221010;https://uae.delidel.in/903/grillers-seara-1300gm.jpg;"Grillers Seara 1300gm";;"Frozen Chicken";15.300000;16.07;170;0
+2401221013;https://uae.delidel.in/919/chicken-iqf-breast-freshly-25-kg.jpg;"Chicken IQF Breast Freshly 2.5 kg";;"Frozen Chicken";37.000000;38.85;183;0
+2401221015;https://uae.delidel.in/905/sliced-jalapeno-peppers-americana.jpg;"Sliced Jalapeno Peppers Americana";;Delicacies;20.000000;21;8;0
+2401221021;https://uae.delidel.in/907/bobby-veal-900gm-al-alam.jpg;"Bobby Veal 900gm Al Alam";;"Frozen Meat";17.500000;18.38;3;0
+2401221023;https://uae.delidel.in/912/white-vinegar-american-gourmet-1-ltr.jpg;"White Vinegar American Gourmet 1 Ltr";;"Cooking Oil & Sauces";2.500000;2.63;37;0
+2401221025;https://uae.delidel.in/914/cheddar-cheese-sauce-american-classic.jpg;"Cheddar Cheese Sauce American Classic";;"Dairy Products";42.000000;44.1;56;0
+2401221028;https://uae.delidel.in/917/syrup-blue-curaco-mojito-giffard.jpg;"Syrup Blue Curaco Mojito Giffard";;"Pulp & Puree";48.000000;50.4;8;0
+2401221029;https://uae.delidel.in/918/syrup-blue-berry-mojito-giffard.jpg;"Syrup Blue Berry Mojito Giffard";;"Pulp & Puree";48.000000;50.4;7;0
+2401221035;https://uae.delidel.in/925/cooking-cream-flexi-1ltr.jpg;"Cooking Cream Flexi 1Ltr";;"Cooking Oil & Sauces";11.000000;11.55;242;0
+2401221036;https://uae.delidel.in/924/frozen-paneer-desi-fresh-1kg.jpg;"Frozen Paneer Desi Fresh 1kg";;"Dairy Products";21.000000;22.05;281;0
+2401221076;https://uae.delidel.in/972/pulp-mango-le-chef-1kg.jpg;"Pulp Mango Le Chef 1kg";;"Pulp & Puree";15.000000;15.75;84;0
+2401221077;https://uae.delidel.in/974/pulp-guava-le-chef-1kg.jpg;"Pulp Guava Le Chef 1kg";;"Pulp & Puree";15.000000;15.75;43;0
+2401221078;https://uae.delidel.in/973/pulp-sapota-le-chef-1kg.jpg;"Pulp Sapota Le Chef 1kg";;"Pulp & Puree";15.000000;15.75;43;0
+2401221083;https://uae.delidel.in/978/frozen-paneer-desi-fresh-200gm.jpg;"Frozen Paneer Desi Fresh 200gm";;"Dairy Products";4.250000;4.46;490;0
+2401221087;https://uae.delidel.in/981/gourmet-tomato-ketchup-sachet.jpg;"Gourmet Tomato Ketchup Sachet";;"Cooking Oil & Sauces";48.000000;50.4;33;0
+2401221088;https://uae.delidel.in/982/beef-slices-al-alam-900gm.jpg;"Beef Slices Al Alam 900gm";;"Frozen Meat";17.250000;18.11;288;0
+2401221099;https://uae.delidel.in/992/french-fries-9mm-sadia-25kg.jpg;"French Fries 9mm Sadia 2.5kg";;"French Fries & Specialities";11.000000;11.55;14;0
+2401221105;https://uae.delidel.in/1002/grillers-urussa-1000gm.jpg;"Grillers Urussa 1000gm";;"Frozen Chicken";14.000000;14.7;259;0
+2401221111;https://uae.delidel.in/1010/grillers-confidence-1000gm.jpg;"Grillers Confidence 1000gm";;"Frozen Chicken";14.200000;14.91;905;0
+2401221114;https://uae.delidel.in/1014/pulp-custard-apple-fruiten-1kg.jpg;"Pulp Custard Apple Fruiten 1kg";;"Pulp & Puree";19.750000;20.74;28;0
+2401221123;https://uae.delidel.in/1029/milk-powder-al-mudhish-625kg.jpg;"Milk Powder Al Mudhish 6*2.5kg";;"Dairy Products";51.000000;53.55;9;0
+2401221124;https://uae.delidel.in/1034/green-chilly-pickled.jpg;"Green Chilly Pickled";;"Cooking Oil & Sauces";21.000000;22.05;1922;0
+2401221125;https://uae.delidel.in/1033/mix-pickle-mohalel.jpg;"Mix Pickle Mohalel";;"Cooking Oil & Sauces";22.000000;23.1;1338;0
+2401221126;https://uae.delidel.in/1032/kingfish-steaks-2kg.jpg;"Kingfish Steaks 2kg";;"Frozen Seafood";40.000000;42;12;0
+2401221127;https://uae.delidel.in/1035/vegetable-ghee-mumtaz-16kg.jpg;"Vegetable Ghee Mumtaz 16kg";;"Cooking Oil & Sauces";146.000000;153.3;10;0
+2401221128;https://uae.delidel.in/1037/frozen-quail-germania-600gm.jpg;"Frozen Quail Germania 600gm";;"Frozen Chicken";20.000000;21;28;0
+2401221133;https://uae.delidel.in/1041/beefveal-cube-golden-fresh.jpg;"Beef/Veal Cube Golden Fresh";;"Frozen Meat";15.150000;15.91;144;0
+2401221135;https://uae.delidel.in/1046/sunflower-oil-15ltr.jpg;"Sunflower Oil 1.5Ltr";;"Cooking Oil & Sauces";13.000000;13.65;15;0
+2401221137;https://uae.delidel.in/1055/tomato-paste-virginia-22kg.jpg;"Tomato Paste Virginia 2.2kg";;"Cooking Oil & Sauces";12.500000;13.13;10;0
+2401221139;https://uae.delidel.in/1054/caramel-syrup-virginia-624ml.jpg;"Caramel Syrup Virginia 624ml";;"Cooking Oil & Sauces";6.250000;6.56;92;0
+2401221140;https://uae.delidel.in/1053/chocolate-syrup-virginia-624ml.jpg;"Chocolate Syrup Virginia 624ml";;"Cooking Oil & Sauces";6.500000;6.83;39;0
+2401221141;https://uae.delidel.in/1052/strawberry-syrup-virginia-624ml.jpg;"Strawberry Syrup Virginia 624ml";;"Cooking Oil & Sauces";6.250000;6.56;44;0
+2401221142;https://uae.delidel.in/1051/mango-pickle-virginia-5kg.jpg;"Mango Pickle Virginia 5kg";;"Cooking Oil & Sauces";18.000000;18.9;16;0
+2401221143;https://uae.delidel.in/1050/lime-pickle-virginia-5kg.jpg;"Lime Pickle Virginia 5kg";;"Cooking Oil & Sauces";18.000000;18.9;18;0
+2401221144;https://uae.delidel.in/1049/mixed-pickle-virginia-5kg.jpg;"Mixed Pickle Virginia 5kg";;"Cooking Oil & Sauces";18.000000;18.9;8;0
+2401221146;https://uae.delidel.in/1048/rose-water-virginia-450ml.jpg;"Rose Water  Virginia 450ml";;"Cooking Oil & Sauces";2.000000;2.1;60;0
+2401221147;https://uae.delidel.in/1047/olive-oil-zahara-4ltr.jpg;"Olive Oil Zahara 4Ltr";;"Cooking Oil & Sauces";52.000000;54.6;8;0
+2401221149;https://uae.delidel.in/1044/chick-peas-virginia-400gm.jpg;"Chick Peas Virginia 400gm";;"Fruit & Veg";1.916666;2.01;58;0
+2401221157;https://uae.delidel.in/1069/frozen-okra-zero-foodico-400gm.jpg;"Frozen Okra Zero Foodico 400gm";;"Fruit & Veg";3.200000;3.36;4;0
+2401221158;https://uae.delidel.in/1068/frozen-mixed-vegetables-foodico-400gm.jpg;"Frozen Mixed Vegetables Foodico 400gm";;"Fruit & Veg";1.800000;1.89;2;0
+2401221164;https://uae.delidel.in/1071/beef-liver.jpg;"Beef Liver";;"Frozen Meat";12.000000;12.6;197;0
+2401221168;https://uae.delidel.in/1077/chicken-liver-nat-450gm.jpg;"Chicken Liver Nat 450gm";;"Frozen Chicken";4.000000;4.2;42;0
+2401221172;https://uae.delidel.in/1082/grillers-900gm-sadia.jpg;"Grillers 900gm Sadia";;"Frozen Chicken";14.900000;15.65;8;0
+2401221178;https://uae.delidel.in/1087/mutton-cubes-al-alam.jpg;"Mutton Cubes Al Alam";;"Frozen Meat";16.250000;17.06;313;0
+2401221179;https://uae.delidel.in/1098/plastic-gloves-disposable.jpg;"Plastic Gloves Disposable";;Disposables;70.000000;73.5;26;0
+2401221180;https://uae.delidel.in/1097/net-cap-black.jpg;"Net Cap Black";;Disposables;40.000000;42;24;0
+2401221181;https://uae.delidel.in/1096/powder-free-gloves-vinyl.jpg;"Powder Free Gloves Vinyl";;Disposables;10.000000;10.5;187;0
+2401221182;https://uae.delidel.in/1095/straws-black-8mm.jpg;"Straws Black 8mm";;Disposables;7.500000;7.88;47;0
+2401221183;https://uae.delidel.in/1094/plastic-fork-disposable.jpg;"Plastic Fork Disposable";;Disposables;40.000000;42;15;0
+2401221184;https://uae.delidel.in/1093/sufra-roll-2-premium.jpg;"Sufra Roll 2 Premium";;Disposables;30.000000;31.5;22;0
+2401221185;https://uae.delidel.in/1092/cling-film-30cm-1kg.jpg;"Cling Film 30cm 1kg";;Disposables;15.000000;15.75;13;0
+2401221186;https://uae.delidel.in/1091/plastic-spoon-white-disposable.jpg;"Plastic Spoon White Disposable";;Disposables;45.000000;47.25;9;0
+2401221187;https://uae.delidel.in/1090/aluminium-foil-30cm-1kg.jpg;"Aluminium Foil 30cm 1kg";;Disposables;18.000000;18.9;35;0
+2401221189;https://uae.delidel.in/1088/paper-cup-65oz-260gsm.jpg;"Paper Cup 6.5oz 260gsm";;Disposables;45.000000;47.25;10;0
+2401221191;https://uae.delidel.in/1099/natural-honey-amexicana-3kg.jpg;"Natural Honey Amexicana 3kg";;"Cooking Oil & Sauces";34.000000;35.7;5;0
+2401221195;https://uae.delidel.in/1103/syrup-strawberry-mojito-giffard.jpg;"Syrup Strawberry Mojito Giffard";;"Pulp & Puree";48.000000;50.4;9;0
+2401221201;https://uae.delidel.in/1106/frozen-seafood-mix-1kg.jpg;"Frozen Seafood Mix 1kg";;"Frozen Seafood";14.000000;14.7;43;0
+2401221205;https://uae.delidel.in/1114/herman-french-dressing.jpg;"Herman French Dressing";;"Cooking Oil & Sauces";37.500000;39.38;13;0
+2401221206;https://uae.delidel.in/1113/herman-ranch-dressing.jpg;"Herman Ranch Dressing";;"Cooking Oil & Sauces";45.000000;47.25;10;0
+2401221207;https://uae.delidel.in/1115/mozzarella-shredded-kaniar-2kg.jpg;"Mozzarella Shredded Kaniar 2kg";;"Dairy Products";30.000000;31.5;4;0
+2401221211;https://uae.delidel.in/1122/powder-free-gloves-vinyl-black.jpg;"Powder Free Gloves Vinyl Black";;Disposables;10.000000;10.5;119;0
+2401221214;https://uae.delidel.in/1119/samaro-black-tea-karak-5kg.jpg;"Samaro Black Tea Karak 5Kg";;"Dry Products";68.000000;71.4;8;0
+2401221215;https://uae.delidel.in/1118/samaro-black-tea-samovar-5kg.jpg;"Samaro Black Tea Samovar 5Kg";;"Dry Products";65.000000;68.25;6;0
+2401221216;https://uae.delidel.in/1124/grillers-800gm-urussa.jpg;"Grillers 800gm Urussa";;"Frozen Chicken";12.200000;12.81;181;0
+2401221219;https://uae.delidel.in/1127/pulp-mango-fruiten-1kg.jpg;"Pulp Mango Fruiten 1kg";;"Pulp & Puree";16.000000;16.8;6;0
+2401221220;https://uae.delidel.in/1128/evaporated-tea-milk-samaro-410gm.jpg;"Evaporated Tea Milk Samaro 410gm";;"Dairy Products";2.600000;2.73;647;0
+2401221223;https://uae.delidel.in/1133/frozen-sweet-corn-on-cob.jpg;"Frozen Sweet Corn on Cob";;"Fruit & Veg";6.000000;6.3;14;0
+2401221224;https://uae.delidel.in/1134/rose-water-zara-400ml.jpg;"Rose Water Zara 400ml";;"Cooking Oil & Sauces";1.250000;1.31;15;0
+2401221225;https://uae.delidel.in/1135/corn-flour-american-gourmet-400gm.jpg;"Corn Flour American Gourmet 400gm";;"Dry Products";2.500000;2.63;53;0
+2401221226;https://uae.delidel.in/1136/honey-american-gourmet-3kg.jpg;"Honey American Gourmet 3kg";;"Cooking Oil & Sauces";32.000000;33.6;7;0
+2401221227;https://uae.delidel.in/1137/soya-sauce-american-gourmet-gallon.jpg;"Soya Sauce American Gourmet Gallon";;"Cooking Oil & Sauces";15.000000;15.75;16;0
+2401221228;https://uae.delidel.in/1138/ketchup-gallon-american-gourmet-5kg.jpg;"Ketchup Gallon American Gourmet 5kg";;"Cooking Oil & Sauces";16.000000;16.8;33;0
+2401221229;https://uae.delidel.in/1148/ice-cream-chocolate-caic-64ltr.jpg;"Ice Cream Chocolate Caic 6*4ltr";;"Dairy Products";19.000000;19.95;130;0
+2401221230;https://uae.delidel.in/1149/ice-cream-strawberry-caic-64ltr.jpg;"Ice Cream Strawberry Caic 6*4ltr";;"Dairy Products";17.000000;17.85;104;0
+2401221231;https://uae.delidel.in/1150/ice-cream-vanilla-caic-64ltr.jpg;"Ice Cream Vanilla Caic 6*4ltr";;"Dairy Products";18.000000;18.9;36;0
+2401221235;https://uae.delidel.in/1171/sugar-nellon-1kg.jpg;"Sugar Nellon 1kg";;"Dry Products";3.750000;3.94;19;0
+2401221236;https://uae.delidel.in/1173/rice-powder-nellon-1kg.jpg;"Rice Powder Nellon 1kg";;"Dry Products";4.000000;4.2;10;0
+2401221237;https://uae.delidel.in/1164/fish-masala-nellon-1kg.jpg;"Fish Masala Nellon 1kg";;"Dry Products";15.000000;15.75;13;0
+2401221238;https://uae.delidel.in/1163/chicken-masala-nellon-1kg.jpg;"Chicken Masala Nellon 1kg";;"Dry Products";15.000000;15.75;4;0
+2401221239;https://uae.delidel.in/1172/meat-masala-nellon-1kg.jpg;"Meat Masala Nellon 1kg";;"Dry Products";14.500000;15.23;13;0
+2401221240;https://uae.delidel.in/1165/garam-masala-nellon-1kg.jpg;"Garam Masala Nellon 1kg";;"Dry Products";18.000000;18.9;12;0
+2401221241;https://uae.delidel.in/1174/turmeric-powder-nellon-1kg.jpg;"Turmeric Powder Nellon 1kg";;"Dry Products";8.000000;8.4;12;0
+2401221242;https://uae.delidel.in/1175/coriander-powder-nellon-1kg.jpg;"Coriander Powder Nellon 1kg";;"Dry Products";7.500000;7.88;15;0
+2401221243;https://uae.delidel.in/1162/black-pepper-powder-nellon-1kg.jpg;"Black Pepper Powder Nellon 1kg";;"Dry Products";16.000000;16.8;8;0
+2401221244;https://uae.delidel.in/1169/kashmiri-chilli-powder-nellon-1kg.jpg;"Kashmiri Chilli Powder Nellon 1kg";;"Dry Products";19.000000;19.95;4;0
+2401221245;https://uae.delidel.in/1180/chilli-powder-nellon-1kg.jpg;"Chilli Powder Nellon 1kg";;"Dairy Products";12.000000;12.6;7;0
+2401221247;https://uae.delidel.in/1152/maxiroll-tissue-16roll.jpg;"Maxiroll Tissue 1*6roll";;Disposables;27.000000;28.35;11;0
+2401221248;https://uae.delidel.in/1153/aluminium-container-and-lid-8342.jpg;"Aluminium Container and Lid 8342";;Disposables;85.000000;89.25;15;0
+2401221249;https://uae.delidel.in/1154/plastic-bowl-milco-and-lid-200ml.jpg;"Plastic Bowl Milco and Lid 200ml";;Disposables;98.000000;102.9;26;0
+2401221250;https://uae.delidel.in/1155/garlic-cup-and-lid-1oz.jpg;"Garlic Cup and Lid 1Oz";;Disposables;55.000000;57.75;22;0
+2401221251;https://uae.delidel.in/1157/garbage-bag-95120-20kg.jpg;"Garbage Bag 95*120 20kg";;Disposables;80.000000;84;35;0
+2401221253;https://uae.delidel.in/1158/hamburger-box-clear-kt120.jpg;"Hamburger Box Clear KT120";;Disposables;95.000000;99.75;1;0
+2401221254;https://uae.delidel.in/1159/burger-box-clear-large-kt6.jpg;"Burger Box Clear Large KT6";;Disposables;118.000000;123.9;1;0
+2401221256;https://uae.delidel.in/1161/aluminium-platter-65180.jpg;"Aluminium Platter 65180";;Disposables;36.000000;37.8;6;0
+2401221257;https://uae.delidel.in/1179/caramel-syrup-american-gourmet-624gm.jpg;"Caramel Syrup American Gourmet 624gm";;"Cooking Oil & Sauces";6.000000;6.3;84;0
+2401221258;https://uae.delidel.in/1178/strawberry-syrup-american-gourmet-624gm.jpg;"Strawberry Syrup American Gourmet 624gm";;"Cooking Oil & Sauces";5.500000;5.78;52;0
+2401221259;https://uae.delidel.in/1177/chocolate-syrup-american-gourmet-624gm.jpg;"Chocolate Syrup American Gourmet 624gm";;"Cooking Oil & Sauces";5.500000;5.78;52;0
+2401221260;https://uae.delidel.in/1176/white-vinegar-gallon-american-gourmet-378ltr.jpg;"White Vinegar Gallon American Gourmet 3.78ltr";;"Cooking Oil & Sauces";6.500000;6.83;12;0
+2401221263;https://uae.delidel.in/1182/chicken-iqf-breast-sadia-2kg.jpg;"Chicken IQF Breast Sadia 2kg";;"Frozen Chicken";39.000000;40.95;68;0
+2401221269;https://uae.delidel.in/1186/plastic-glass-5oz-11000pc.jpg;"Plastic Glass 5oz 1*1000pc";;Disposables;17.500000;18.38;23;0
+2401221270;https://uae.delidel.in/1187/plastic-bowl-75cc-with-lid-11500pc.jpg;"Plastic Bowl 75cc with Lid 1*1500pc";;Disposables;80.000000;84;42;0
+2401221272;https://uae.delidel.in/1189/syrup-yellow-peach-vedrenne.jpg;"Syrup Yellow Peach Vedrenne";;"Pulp & Puree";48.000000;50.4;28;0
+2401221273;https://uae.delidel.in/1190/tomato-ketchup-sachet-super-chef-10009gms.jpg;"Tomato Ketchup Sachet Super Chef 1000*9gms";;"Cooking Oil & Sauces";45.000000;47.25;20;0
+2401221274;https://uae.delidel.in/1191/pineapple-slice-in-light-syrup-super-chef-565gm.jpg;"Pineapple Slice in Light Syrup Super Chef 565gm";;Delicacies;5.000000;5.25;4;0
+2401221275;https://uae.delidel.in/1192/dark-soya-sauce-super-chef-5ltr.jpg;"Dark Soya Sauce Super Chef 5ltr";;"Cooking Oil & Sauces";20.000000;21;16;0
+2401221276;https://uae.delidel.in/1193/iodized-salt-super-chef-1kg.jpg;"Iodized Salt Super Chef 1kg";;"Dry Products";1.750000;1.84;4;0
+2401221277;https://uae.delidel.in/1202/lid-for-8oz-paper-cup.jpg;"Lid For 8Oz Paper Cup";;Disposables;45.000000;47.25;2;0
+2401221278;https://uae.delidel.in/1201/paper-cup-hd-8oz.jpg;"Paper Cup HD 8Oz";;Disposables;57.000000;59.85;5;0
+2401221279;https://uae.delidel.in/1209/plastic-bowl-350ml-and-lid-milco.jpg;"Plastic Bowl 350ml and Lid Milco";;Disposables;115.000000;120.75;13;0
+2401221280;https://uae.delidel.in/1199/scoring-pad-with-sponge-12pc.jpg;"Scoring Pad with Sponge 12pc";;Disposables;9.000000;9.45;97;0
+2401221281;https://uae.delidel.in/1198/sandwich-paper-printed.jpg;"Sandwich Paper Printed";;Disposables;10.000000;10.5;1;0
+2401221282;https://uae.delidel.in/1197/sandwich-paper-white.jpg;"Sandwich Paper White";;Disposables;70.000000;73.5;146;0
+2401221286;https://uae.delidel.in/1208/aluminium-container-8389-with-lid.jpg;"Aluminium Container 8389 With Lid";;Disposables;112.000000;117.6;8;0
+2401221288;https://uae.delidel.in/1210/mayonnaise-sachet-american-gourmet-10009gms.jpg;"Mayonnaise Sachet American Gourmet 1000*9gms";;"Cooking Oil & Sauces";58.000000;60.9;16;0
+2401221293;https://uae.delidel.in/1218/lid-for-cup-65oz.jpg;"Lid For Cup 6.5Oz";;Disposables;32.000000;33.6;12;0
+2401221294;https://uae.delidel.in/1219/ice-cream-pista-plain-caic-64ltr.jpg;"Ice Cream Pista Plain Caic 6*4ltr";;"Dairy Products";17.000000;17.85;79;0
+2401221296;https://uae.delidel.in/1221/ice-cream-butterscotch-caic-64ltr.jpg;"Ice Cream Butterscotch Caic 6*4ltr";;"Dairy Products";17.000000;17.85;131;0
+2401221297;https://uae.delidel.in/1223/black-tea-bag-alokozay-1100bags.jpg;"Black Tea Bag Alokozay 1*100Bags";;"Dry Products";9.000000;9.45;69;0
+2401221298;https://uae.delidel.in/1222/black-tea-powder-alokozay-5kg.jpg;"Black Tea Powder Alokozay 5kg";;"Dry Products";75.000000;78.75;17;0
+2401221299;https://uae.delidel.in/1224/baking-powder-american-gourmet-100gm.jpg;"Baking Powder American Gourmet 100gm";;"Dry Products";1.500000;1.58;41;0
+2401221300;https://uae.delidel.in/1225/hot-sauce-american-gourmet-473ml.jpg;"Hot Sauce American Gourmet 473ml";;"Cooking Oil & Sauces";2.850000;2.99;29;0
+2401221301;https://uae.delidel.in/1226/bbq-sauce-american-gourmet-510gm.jpg;"BBQ Sauce American Gourmet 510gm";;"Cooking Oil & Sauces";5.850000;6.14;27;0
+2401221302;https://uae.delidel.in/1227/tomato-paste-american-gourmet-800gm.jpg;"Tomato Paste American Gourmet 800gm";;"Cooking Oil & Sauces";4.650000;4.88;18;0
+2401221304;https://uae.delidel.in/1231/ketchup-gallon-taste-master-5kg.jpg;"Ketchup Gallon Taste Master 5kg";;"Cooking Oil & Sauces";14.000000;14.7;38;0
+2401221305;https://uae.delidel.in/1232/mayonnaise-gallon-taste-master-378ltr.jpg;"Mayonnaise Gallon Taste Master 3.78ltr";;"Cooking Oil & Sauces";20.000000;21;35;0
+2401221306;https://uae.delidel.in/1233/star-soda-24x300ml.jpg;"Star Soda 24x300ml";;Beverages;20.000000;21;104;0
+2401221308;https://uae.delidel.in/1236/syrup-green-mint-mojito-vedrenne.jpg;"Syrup Green Mint Mojito Vedrenne";;"Pulp & Puree";48.000000;50.4;5;0
+2401221309;https://uae.delidel.in/1237/paper-cup-6oz-210gsm.jpg;"Paper Cup 6oz 210gsm";;Disposables;45.000000;47.25;10;0
+2401221311;https://uae.delidel.in/1239/frozen-vegetable-momos-bell.jpg;"Frozen Vegetable Momos Bell";;Delicacies;36.000000;37.8;29;0
+2401221312;https://uae.delidel.in/1240/frozen-chicken-momos-bell.jpg;"Frozen Chicken Momos Bell";;Delicacies;38.000000;39.9;16;0
+2401221319;https://uae.delidel.in/1248/plastic-tray-no-3.jpg;"Plastic Tray No 3";;Disposables;20.000000;21;17;0
+2401221320;https://uae.delidel.in/1249/plastic-tray-no-1.jpg;"Plastic Tray No 1";;Disposables;20.000000;21;5;0
+2401221321;https://uae.delidel.in/1251/pulp-grapes-le-chef-1kg.jpg;"Pulp Grapes Le Chef 1kg";;"Pulp & Puree";15.000000;15.75;44;0
+2401221322;https://uae.delidel.in/1250/grillers-frangosul-800gm.jpg;"Grillers Frangosul 800gm";;"Frozen Chicken";12.500000;13.13;20;0
+2401221326;https://uae.delidel.in/1256/al-khaleej-sugar-50kg.jpg;"Al Khaleej Sugar 50kg";;"Dry Products";112.000000;117.6;28;0
+2401221327;https://uae.delidel.in/1257/syrup-pineapple-vedrenne.jpg;"Syrup Pineapple Vedrenne";;"Pulp & Puree";48.000000;50.4;22;0
+2401221328;https://uae.delidel.in/1258/syrup-raspberry-vedrenne.jpg;"Syrup Raspberry Vedrenne";;"Pulp & Puree";48.000000;50.4;21;0
+2401221329;https://uae.delidel.in/1259/lucky-fine-sugar-white-10kg.jpg;"Lucky Fine Sugar White 10kg";;"Dry Products";26.000000;27.3;16;0
+2401221330;https://uae.delidel.in/1261/two-spoon-ghee-tin-10ltr.jpg;"Two Spoon Ghee Tin 10ltr";;"Cooking Oil & Sauces";79.000000;82.95;4;0
+2401221331;https://uae.delidel.in/1260/grand-mills-parotta-maida-50kg.jpg;"Grand Mills Parotta Maida 50kg";;"Dry Products";114.000000;119.7;9;0
+2401221338;https://uae.delidel.in/1272/breaded-chicken-strips-seara-1kg.jpg;"Breaded Chicken Strips Seara 1kg";;Delicacies;8.000000;8.4;31;0
+2401221339;https://uae.delidel.in/1271/chicken-popcorn-seara-1kg.jpg;"Chicken Popcorn Seara 1kg";;Delicacies;1.000000;1.05;8;0
+2401221340;https://uae.delidel.in/1270/chicken-nuggets-seara-1kg.jpg;"Chicken Nuggets Seara 1kg";;Delicacies;2.000000;2.1;10;0
+2401221341;https://uae.delidel.in/1269/chicken-iqf-breast-seara-4-oz.jpg;"Chicken IQF Breast Seara 4 oz";;Delicacies;18.000000;18.9;138;0
+2401221345;https://uae.delidel.in/1277/cheddar-cheese-sauce-super-chef-3kg.jpg;"Cheddar Cheese Sauce Super Chef 3kg";;"Cooking Oil & Sauces";32.000000;33.6;11;0
+2401221346;https://uae.delidel.in/1278/grand-mills-flour-no-2-chappati-atta-50kg.jpg;"Grand Mills Flour No 2 Chappati Atta 50kg";;"Dry Products";108.000000;113.4;21;0
+2401221350;https://uae.delidel.in/1283/emirates-water-15ltr.jpg;"Emirates Water 1.5ltr";;Beverages;5.000000;5.25;80;0
+2401221351;https://uae.delidel.in/1285/emirates-water-500ml.jpg;"Emirates Water 500ml";;Beverages;5.000000;5.25;82;0
+2401221355;https://uae.delidel.in/1291/sliced-jalapeno-american-classic.jpg;"Sliced Jalapeno American Classic";;Delicacies;20.000000;21;91;0
+2401221356;https://uae.delidel.in/1289/evaporated-tea-milk-dr-kitchen-410gm.jpg;"Evaporated Tea Milk Dr Kitchen 410gm";;"Dairy Products";2.541666;2.67;5898;0
+2401221357;https://uae.delidel.in/1293/ice-cream-fruitsalad-caic-64ltr.jpg;"Ice Cream Fruitsalad Caic 6*4ltr";;"Dairy Products";17.000000;17.85;136;0
+2401221359;https://uae.delidel.in/1295/grand-mills-flour-no-1-white-flour-10kg.jpg;"Grand Mills Flour No 1 White Flour 10kg";;"Dry Products";25.000000;26.25;9;0
+2401221362;https://uae.delidel.in/1302/frozen-mixed-vegetables-reva-3-way-mix-425kg.jpg;"Frozen Mixed Vegetables Reva 3 way Mix 4*2.5kg";;"Fruit & Veg";13.750000;14.44;328;0
+2401221363;https://uae.delidel.in/1301/frozen-mixed-vegetables-reva-4-way-mix-400gms.jpg;"Frozen Mixed Vegetables Reva 4 way Mix 400gms";;"Fruit & Veg";2.750000;2.89;3562;0
+2401221365;https://uae.delidel.in/1299/frozen-green-peas-reva-400gm.jpg;"Frozen Green Peas Reva 400gm";;"Fruit & Veg";3.250000;3.41;1687;0
+2401221366;https://uae.delidel.in/1298/frozen-green-peas-reva-425kg.jpg;"Frozen Green Peas Reva 4*2.5kg";;"Fruit & Veg";16.250000;17.06;1434;0
+2401221367;https://uae.delidel.in/1304/veal-leg-afzal-45kg.jpg;"Veal leg Afzal 4.5kg";;"Frozen Meat";90.000000;94.5;8;0
+2401221368;https://uae.delidel.in/1305/mutton-cubes-alif.jpg;"Mutton Cubes Alif";;"Frozen Meat";9.850000;10.34;40;0
+2401221371;https://uae.delidel.in/1310/arabic-masala-powder-nellon-1kg.jpg;"Arabic Masala Powder Nellon 1kg";;"Dry Products";18.500000;19.43;8;0
+2401221372;https://uae.delidel.in/1311/drop-iqf-frozen-wild-blueberry-25kg.jpg;"Drop IQF Frozen Wild Blueberry 2.5kg";;"Fruit & Veg";125.000000;131.25;13;0
+2401221373;https://uae.delidel.in/1312/tomato-ketchup-sachet-dr-kitchen.jpg;"Tomato Ketchup Sachet Dr Kitchen";;"Cooking Oil & Sauces";44.000000;46.2;32;0
+2401221374;https://uae.delidel.in/1315/potato-chips-chilli-flavour-al-mudhish-15gm.jpg;"Potato Chips Chilli Flavour Al Mudhish 15gm";;"French Fries & Specialities";40.000000;42;49;0
+2401221375;https://uae.delidel.in/1316/mayonnaise-sachet-dr-kitchen-100010gms.jpg;"Mayonnaise Sachet Dr Kitchen 1000*10gms";;"Cooking Oil & Sauces";53.000000;55.65;3;0
+2401221376;https://uae.delidel.in//pallet-1.jpg;"Pallet 1";;Home;16.500000;17.33;665;0
+2401221377;https://uae.delidel.in//pallet-4.jpg;"Pallet 4";;Home;5.000000;5.25;498;0
+2401221378;https://uae.delidel.in//pallet-3.jpg;"Pallet 3";;Home;12.500000;13.13;864;0
+2401221379;https://uae.delidel.in//pallet-2.jpg;"Pallet 2";;Home;13.500000;14.18;652;0
+2401221380;https://uae.delidel.in/1317/french-fries-6mm-reva-crispy-crunch-25kg.jpg;"French Fries 6mm Reva Crispy Crunch 2.5kg";;"French Fries & Specialities";20.250000;21.26;32;0
+2401221381;https://uae.delidel.in/1318/french-dressing-american-gourmet.jpg;"French Dressing American Gourmet";;"Cooking Oil & Sauces";30.000000;31.5;2;0
+2401221386;https://uae.delidel.in/1544/yellow-cheddar-cheese-slice-chefmate-227kg.jpg;"Yellow Cheddar Cheese Slice Chefmate 2.27kg";;"Dairy Products";48.000000;50.4;50;0
+2401221388;https://uae.delidel.in/1617/pulp-jackfruit-fruiton-1kg.jpg;"Pulp Jackfruit Fruiton 1kg";;"Pulp & Puree";12.000000;12.6;20;0
+2401221389;https://uae.delidel.in/1616/pulp-avocado-fruiten-1kg.jpg;"Pulp Avocado Fruiten 1kg";;"Pulp & Puree";18.000000;18.9;3;0
+2401221390;https://uae.delidel.in/1586/crushed-chilly-nellon-1kg.jpg;"Crushed Chilly Nellon 1kg";;"Dry Products";15.000000;15.75;6;0
+2401221403;https://uae.delidel.in/1584/samosa-chicken-50g-akb-1x25.jpg;"Samosa Chicken 50g AKB (1x25)";;Delicacies;15.000000;15.75;32;0
+2401221404;https://uae.delidel.in/1583/samosa-veg-50g-akb-1x25.jpg;"Samosa Veg 50g AKB ( 1x25)";;Delicacies;12.000000;12.6;41;0
+2401221424;https://uae.delidel.in/1570/sunflower-oil-3-ltr.jpg;"Sunflower oil 3 Ltr";;"Cooking Oil & Sauces";28.000000;29.4;2;0
+2401221487;https://uae.delidel.in/1612/duck-grillers-germania-2200gm.jpg;"Duck Grillers Germania 2200gm";2401221487;"Frozen Chicken";41.000000;43.05;2;0
+2401221491;https://uae.delidel.in/1611/frozen-strawberry-elbadawy-25kg.jpg;"Frozen Strawberry ELBADAWY 2.5kg";;"Fruit & Veg";15.000000;15.75;648;0
+2401221492;https://uae.delidel.in/1457/french-fries-9mm-nemo-25kg.jpg;"French Fries 9mm Nemo 2.5kg";;"French Fries & Specialities";11.000000;11.55;28;0
+2401221495;https://uae.delidel.in/1582/wow-paneer-momo-240gm.jpg;"Wow Paneer Momo 240gm";;Delicacies;4.000000;4.2;71;0
+2401221496;https://uae.delidel.in/1581/wow-chicken-cheese-chilli-momo-240gm.jpg;"Wow Chicken Cheese Chilli Momo 240gm";;Delicacies;4.000000;4.2;71;0
+2401221497;https://uae.delidel.in/1580/wow-corn-cheese-chilli-momo-240gm.jpg;"Wow Corn Cheese Chilli Momo 240gm";;Delicacies;4.000000;4.2;64;0
+2401221498;https://uae.delidel.in/1579/wow-chicken-cheese-momo-240gm.jpg;"Wow Chicken Cheese Momo 240gm";;Delicacies;4.000000;4.2;53;0
+2401221499;https://uae.delidel.in/1578/wow-darjeeling-veg-momo-240gm.jpg;"Wow Darjeeling Veg Momo 240gm";;Delicacies;4.000000;4.2;93;0
+2401221500;https://uae.delidel.in/1577/wow-corn-cheese-momo-240gm.jpg;"Wow Corn Cheese Momo 240gm";;Delicacies;4.000000;4.2;96;0
+2401221501;https://uae.delidel.in/1422/anjali-gold-sona-masoori-rice-18kg.jpg;"Anjali Gold Sona Masoori Rice 18kg";;"Dry Products";41.000000;43.05;4;0
+2401221503;https://uae.delidel.in//grillers-unef-900gm.jpg;"Grillers Unef 900gm";;"Frozen Chicken";11.250000;11.81;6;0
+2401221504;https://uae.delidel.in/1610/chicken-franks-al-islami-340gm.jpg;"Chicken Franks Al Islami 340gm";;"Frozen Chicken";2.600000;2.73;252;0
+2401221506;https://uae.delidel.in/1609/beef-liver-10kg.jpg;"Beef Liver 10kg";;"Frozen Meat";110.000000;115.5;16;0
+2401221507;https://uae.delidel.in/1592/french-fries-6mm-coated-leader-25kg.jpg;"French Fries 6mm coated Leader 2.5kg";;"French Fries & Specialities";20.250000;21.26;933;0
+2401221509;https://uae.delidel.in/1608/duck-grillers-thailand-2000gm.jpg;"Duck Grillers Thailand 2000gm";;"Frozen Chicken";32.000000;33.6;52;0
+2401221511;https://uae.delidel.in/1606/frozen-sweet-corn-leader-25kg.jpg;"Frozen Sweet Corn Leader 2.5kg";;"Fruit & Veg";12.000000;12.6;87;0
+2401221512;https://uae.delidel.in/1605/frozen-mango-pulp-leader-1kg.jpg;"Frozen Mango Pulp Leader 1kg";;"Pulp & Puree";6.000000;6.3;16;0
+2401221517;https://uae.delidel.in/1572/slice-cheese-maestro-burger-coloured-14kg.jpg;"Slice Cheese Maestro Burger Coloured 1.4kg";;"Dairy Products";44.000000;46.2;8;0
+2401221519;https://uae.delidel.in/1591/breaded-onion-rings-400gm-sadia.jpg;"Breaded Onion Rings 400gm Sadia";;"French Fries & Specialities";6.000000;6.3;59;0
+2401221520;https://uae.delidel.in/1576/breaded-mozzarella-sticks-250gm-sadia.jpg;"Breaded Mozzarella Sticks 250gm Sadia";;Delicacies;17.000000;17.85;52;0
+2401221526;https://uae.delidel.in/1587/french-fries-9mm-pom-clair-crunch-25kg.jpg;"French Fries 9mm Pom Clair Crunch 2.5kg";;"French Fries & Specialities";12.500000;13.13;11;0
+2401221528;https://uae.delidel.in/1601/chicken-wings-al-dhofar-900gm.jpg;"Chicken Wings Al Dhofar 900gm";;"Frozen Chicken";9.750000;10.24;66;0
+2401221534;https://uae.delidel.in/1566/7up-mojito-plastic-bottle-6x15ltr.jpg;"7Up Mojito Plastic Bottle 6x1.5ltr";;Beverages;18.500000;19.43;1;0
+2401221535;https://uae.delidel.in/1565/7up-extra-fizz-plastic-bottle-6x15ltr.jpg;"7Up Extra Fizz Plastic Bottle 6x1.5ltr";;Beverages;19.000000;19.95;13;0
+2401221536;https://uae.delidel.in/1564/pepsi-extra-fizz-plastic-bottle-6x15ltr.jpg;"Pepsi Extra Fizz Plastic Bottle 6x1.5ltr";;Beverages;19.000000;19.95;7;0
+2401221537;https://uae.delidel.in/1563/7up-mojito-lemon-mint-cans-24x330ml.jpg;"7Up Mojito Lemon Mint Cans 24x330ml";;Beverages;51.000000;53.55;19;0
+2401221538;https://uae.delidel.in/1562/mountain-dew-cans-24x330ml.jpg;"Mountain Dew Cans 24x330ml";;Beverages;51.000000;53.55;56;0
+2401221539;https://uae.delidel.in/1560/7up-cans-24x330ml.jpg;"7Up Cans 24x330ml";;Beverages;51.000000;53.55;38;0
+2401221540;https://uae.delidel.in/1559/pepsi-cans-24x330ml.jpg;"Pepsi Cans 24x330ml";;Beverages;51.000000;53.55;57;0
+2401221541;https://uae.delidel.in/1558/7up-plastic-bottle-6x228ltr.jpg;"7Up Plastic Bottle 6x2.28ltr";;Beverages;41.500000;43.58;44;0
+2401221542;https://uae.delidel.in/1557/mountain-dew-plastic-bottle-6x228ltr.jpg;"Mountain Dew Plastic Bottle 6x2.28ltr";;Beverages;41.500000;43.58;42;0
+2401221543;https://uae.delidel.in/1556/pepsi-plastic-bottle-6x228ltr.jpg;"Pepsi Plastic Bottle 6x2.28ltr";;Beverages;41.500000;43.58;30;0
+2401221544;https://uae.delidel.in/1555/7up-plastic-bottle-6x15ltr.jpg;"7Up Plastic Bottle 6x1.5ltr";;Beverages;26.500000;27.83;45;0
+2401221545;https://uae.delidel.in/1554/mountain-dew-plastic-bottle-6x15ltr.jpg;"Mountain Dew Plastic Bottle 6x1.5ltr";;Beverages;25.500000;26.78;55;0
+2401221546;https://uae.delidel.in/1553/pepsi-plastic-bottle-6x15ltr.jpg;"Pepsi Plastic Bottle 6x1.5ltr";;Beverages;27.000000;28.35;43;0
+2401221547;https://uae.delidel.in/1552/7up-zero-sugar-cans-24x300ml.jpg;"7Up Zero Sugar Cans 24x300ml";;Beverages;47.000000;49.35;20;0
+2401221548;https://uae.delidel.in/1551/pepsi-diet-cans-24x300ml.jpg;"Pepsi Diet Cans 24x300ml";;Beverages;47.500000;49.88;28;0
+2401221549;https://uae.delidel.in/1550/mirinda-orange-cans-24x300ml.jpg;"Mirinda Orange Cans 24x300ml";;Beverages;47.500000;49.88;31;0
+2401221550;https://uae.delidel.in/1549/7up-cans-24x300ml.jpg;"7Up Cans 24x300ml";;Beverages;47.500000;49.88;68;0
+2401221551;https://uae.delidel.in/1548/mountain-dew-cans-24x300ml.jpg;"Mountain Dew Cans 24x300ml";;Beverages;48.000000;50.4;63;0
+2401221552;https://uae.delidel.in/1547/pepsi-cans-24x300ml.jpg;"Pepsi Cans 24x300ml";;Beverages;48.000000;50.4;65;0
+2401221553;https://uae.delidel.in/1597/chicken-gizzard-almana-450gm-x-20.jpg;"Chicken Gizzard Almana 450gm X 20";;"Frozen Chicken";5.250000;5.51;88;0
+2401221575;https://uae.delidel.in/1661/green-peas-777-bag-20kg.jpg;"Green Peas 777 Bag 20kg";;"Dry Products";59.000000;61.95;5;0
+2401221581;https://uae.delidel.in/1663/toor-dal-777-15kg.jpg;"Toor Dal 777 15kg";;"Dry Products";76.000000;79.8;3;0
+2401221583;https://uae.delidel.in/1660/chick-peas-777-12mm-25kg.jpg;"Chick Peas 777 12mm 25kg";;"Dry Products";144.000000;151.2;5;0
+2401221585;https://uae.delidel.in/1718/moong-whole-777-15kg.jpg;"Moong Whole 777 15kg";;"Dry Products";86.000000;90.3;10;0
+2401221586;https://uae.delidel.in/1664/urad-dal-777-15kg.jpg;"Urad Dal 777 15kg";;"Dry Products";84.000000;88.2;2;0
+2401221587;https://uae.delidel.in/1659/chana-dal-777-15kg.jpg;"Chana Dal 777 15kg";;"Dry Products";64.000000;67.2;7;0
+2401221588;https://uae.delidel.in/1662/masoor-dal-777-15kg.jpg;"Masoor Dal 777 15kg";;"Dry Products";56.000000;58.8;11;0
+2401221605;https://uae.delidel.in/1736/jeera-powder-1kg.jpg;"Jeera Powder 1kg";;"Dry Products";17.000000;17.85;3;0
+2401221619;https://uae.delidel.in/1762/cardamom-elaichi-500gm.jpg;"Cardamom (Elaichi) 500gm";;"Dry Products";61.000000;64.05;8;0
+2401221631;https://uae.delidel.in/1695/lipton-classic-green-tea-catering-100pcs-x-15gm.jpg;"Lipton Classic Green Tea Catering 100pcs x 1.5gm";;"Dry Products";20.000000;21;111;0
+2401221635;https://uae.delidel.in/1694/lipton-catering-tea-bag-36x100bag.jpg;"Lipton Catering Tea Bag 36x100Bag";;"Dry Products";10.000000;10.5;222;0
+2401221642;https://uae.delidel.in/1698/nescafe-matinal-instant-coffee-12x200gm.jpg;"Nescafe Matinal Instant Coffee 12x200gm";;"Dry Products";18.500000;19.43;113;0
+2401221644;https://uae.delidel.in/1747/nescafe-red-mug-coffee-12x190gm.jpg;"Nescafe Red Mug Coffee 12x190gm";;"Dry Products";22.000000;23.1;22;0
+2401221646;https://uae.delidel.in/1546/full-fat-long-life-milk-unikai-1ltr.jpg;"Full Fat Long Life Milk Unikai 1Ltr";;"Dairy Products";3.750000;3.94;1300;0
+2401221647;https://uae.delidel.in/1545/french-fries-9mm-reva-25kg.jpg;"French Fries 9mm Reva 2.5kg";;"French Fries & Specialities";13.000000;13.65;14051;0
+2401221649;https://uae.delidel.in/1618/chicken-breast-premium-2kg.jpg;"Chicken Breast Premium 2kg";;"Frozen Chicken";28.000000;29.4;60;0
+2401221650;https://uae.delidel.in/1619/grillers-800gm-confidence.jpg;"Grillers 800gm Confidence";;"Frozen Chicken";12.800000;13.44;120;0
+2401221652;https://uae.delidel.in/1641/grillers-confidence-900gm.jpg;"Grillers Confidence 900gm";;"Frozen Chicken";13.600000;14.28;99;0
+2401221656;https://uae.delidel.in/1651/rejoice-assam-karak-tea-5kg.jpg;"Rejoice Assam Karak Tea 5kg";;"Dry Products";77.000000;80.85;33;0
+2401221657;https://uae.delidel.in/1653/besan-powder-15kg.jpg;"Besan Powder 15kg";;"Dry Products";43.000000;45.15;1;0
+2401221658;https://uae.delidel.in/1654/rice-powder-india-15kg.jpg;"Rice Powder India 15kg";;"Dry Products";41.000000;43.05;4;0
+2401221659;https://uae.delidel.in/1657/tamarind-seedless-500gms.jpg;"Tamarind Seedless 500gms";;"Dry Products";6.000000;6.3;40;0
+2401221660;https://uae.delidel.in/1655/tamarind-seedless-1kg.jpg;"Tamarind Seedless 1kg";;"Dry Products";11.500000;12.08;39;0
+2401221661;https://uae.delidel.in/1652/coconut-powder-viet-7kg.jpg;"Coconut Powder Viet 7kg";;"Dry Products";83.000000;87.15;4;0
+2401221662;https://uae.delidel.in/1666/leone-loose-tea-bag-5kg.jpg;"Leone Loose Tea Bag 5kg";;"Dry Products";76.000000;79.8;23;0
+2401221663;https://uae.delidel.in/1667/leone-karak-chai-5kg.jpg;"Leone Karak Chai 5kg";;"Dry Products";66.000000;69.3;14;0
+2401221664;https://uae.delidel.in/1672/eastern-meat-masala-catering-1kg.jpg;"Eastern Meat Masala Catering 1kg";;"Dry Products";24.500000;25.73;16;0
+2401221665;https://uae.delidel.in/1671/eastern-fish-masala-catering-1kg.jpg;"Eastern Fish Masala Catering 1kg";;"Dry Products";24.500000;25.73;16;0
+2401221666;https://uae.delidel.in/1668/eastern-chicken-masala-catering-1kg.jpg;"Eastern Chicken Masala Catering 1kg";;"Dry Products";24.500000;25.73;11;0
+2401221667;https://uae.delidel.in/1669/eastern-chilly-powder-5kg.jpg;"Eastern Chilly Powder 5kg";;"Dry Products";80.000000;84;15;0
+2401221668;https://uae.delidel.in/1670/eastern-coriander-powder-5kg.jpg;"Eastern Coriander Powder 5kg";;"Dry Products";65.000000;68.25;15;0
+2401221669;https://uae.delidel.in/1673/eastern-turmeric-powder-5kg.jpg;"Eastern Turmeric Powder 5kg";;"Dry Products";70.000000;73.5;15;0
+2401221670;https://uae.delidel.in/1679/white-pepper-powder-ms-1kg.jpg;"White Pepper Powder MS 1kg";;"Dry Products";20.000000;21;3;0
+2401221671;https://uae.delidel.in/1678/tiffany-creams-strawberry-2480gm.jpg;"Tiffany Creams Strawberry 24*80gm";;"Dry Products";16.250000;17.06;58;0
+2401221672;https://uae.delidel.in/1677/tiffany-creams-vanilla-2480gm.jpg;"Tiffany Creams Vanilla 24*80gm";;"Dry Products";16.250000;17.06;54;0
+2401221673;https://uae.delidel.in/1676/tiffany-creams-orange-2480gm.jpg;"Tiffany Creams Orange 24*80gm";;"Dry Products";16.250000;17.06;62;0
+2401221674;https://uae.delidel.in/1675/tiffany-creams-mango-2480gm.jpg;"Tiffany Creams Mango 24*80gm";;"Dry Products";16.250000;17.06;76;0
+2401221675;https://uae.delidel.in/1674/tiffany-creams-chocolate-2480gm.jpg;"Tiffany Creams Chocolate 24*80gm";;"Dry Products";16.250000;17.06;62;0
+2401221677;https://uae.delidel.in/1682/beef-tenderloin-golden-fresh.jpg;"Beef Tenderloin Golden Fresh";;"Frozen Meat";34.500000;36.23;91;0
+2401221678;https://uae.delidel.in/1680/sharbat-rehan-750ml.jpg;"Sharbat Rehan 750ml";;Beverages;11.000000;11.55;119;0
+2401221679;https://uae.delidel.in/1690/food-colour-yellow-kc-1228ml.jpg;"Food Colour Yellow KC 12*28ml";;"Dry Products";11.000000;11.55;11;0
+2401221680;https://uae.delidel.in/1684/vinegar-white-gallon-kc.jpg;"Vinegar White Gallon KC";;"Cooking Oil & Sauces";5.000000;5.25;42;0
+2401221681;https://uae.delidel.in/1685/vanilla-essence-kc-12x28ml.jpg;"Vanilla Essence KC 12x28ml";;"Dry Products";11.000000;11.55;12;0
+2401221682;https://uae.delidel.in/1686/salt-packet-kc-1kg.jpg;"Salt Packet KC 1kg";;"Dry Products";2.000000;2.1;120;0
+2401221683;https://uae.delidel.in/1687/food-colour-red-kc-1228ml.jpg;"Food Colour Red KC 12*28ml";;"Dry Products";11.000000;11.55;10;0
+2401221684;https://uae.delidel.in/1688/pineapple-essence-kc-1228ml.jpg;"Pineapple Essence KC 12*28ML";;"Dry Products";11.000000;11.55;12;0
+2401221685;https://uae.delidel.in/1699/food-colour-green-kc-1228ml.jpg;"Food Colour Green KC 12*28ml";;"Dry Products";11.000000;11.55;8;0
+2401221686;https://uae.delidel.in/1691/coconut-oil-kc-2ltr.jpg;"Coconut Oil KC 2ltr";;"Cooking Oil & Sauces";36.000000;37.8;22;0
+2401221687;https://uae.delidel.in/1692/biriyani-essence-kc-1228ml.jpg;"Biriyani Essence KC 12*28ml";;"Dry Products";11.000000;11.55;12;0
+2401221688;https://uae.delidel.in/1693/horlicks-classic-malt-1kg.jpg;"Horlicks Classic Malt 1kg";;"Dry Products";25.000000;26.25;34;0
+2401221689;https://uae.delidel.in/1696/boost-energy-drink-500gms.jpg;"Boost Energy Drink 500gms";;"Dry Products";12.500000;13.13;110;0
+2401221690;https://uae.delidel.in/1700/tiffany-creams-coconut-2480gm.jpg;"Tiffany Creams Coconut 24*80gm";;"Dry Products";16.250000;17.06;59;0
+2401221691;https://uae.delidel.in/1701/kannan-devan-tea-powder-5kg.jpg;"Kannan Devan Tea Powder 5kg";;"Dry Products";74.000000;77.7;10;0
+2401221692;https://uae.delidel.in/1709/chocolate-slice-cake.jpg;"Chocolate Slice Cake";;Bakery;0.700000;0.74;7;0
+2401221694;https://uae.delidel.in/1702/cake-rusk-box-2x24.jpg;"Cake Rusk Box (2x24)";;Bakery;17.000000;17.85;102;0
+2401221695;https://uae.delidel.in/1708/pineapple-slice-cake.jpg;"Pineapple Slice Cake";;Bakery;0.700000;0.74;25;0
+2401221696;https://uae.delidel.in/1710/titlis-whipping-cream-1kg.jpg;"Titlis Whipping Cream 1kg";;"Dairy Products";12.000000;12.6;22;0
+2401221697;https://uae.delidel.in/1712/chicken-breast-feasto-2kg.jpg;"Chicken Breast Feasto 2kg";;"Frozen Chicken";27.500000;28.88;9;0
+2401221698;https://uae.delidel.in/1713/nutella-chocolate-750gm.jpg;"Nutella Chocolate 750gm";;"Dry Products";27.000000;28.35;24;0
+2401221699;https://uae.delidel.in/1714/orange-slice-cake.jpg;"Orange Slice Cake";;Bakery;0.700000;0.74;11;0
+2401221700;https://uae.delidel.in/1716/beef-chunks-habibi-900gms.jpg;"Beef Chunks Habibi 900gms";;"Frozen Meat";18.800000;19.74;28;0
+2401221701;https://uae.delidel.in/1715/drumstick-in-trays-nat-900gm-small.jpg;"Drumstick in Trays Nat 900gm Small";;"Frozen Chicken";11.750000;12.34;52;0
+2401221702;https://uae.delidel.in/1717/jeerakasala-rice-four-deer-18kg.jpg;"Jeerakasala Rice Four Deer 18kg";;"Dry Products";142.000000;149.1;63;0
+2401221704;https://uae.delidel.in/1721/vanilla-slice-cake.jpg;"Vanilla Slice Cake";;Bakery;0.700000;0.74;20;0
+2401221705;https://uae.delidel.in/1722/palakkadan-matta-rice-volga-18kg.jpg;"Palakkadan Matta Rice Volga 18kg";;"Dry Products";57.000000;59.85;12;0
+2401221706;https://uae.delidel.in/1723/lg-powder-100gms.jpg;"LG Powder 100gms";;"Dry Products";7.000000;7.35;44;0
+2401221707;https://uae.delidel.in/1724/besan-powder-777-15kg.jpg;"Besan Powder 777 15kg";;"Dry Products";42.000000;44.1;6;0
+2401221708;https://uae.delidel.in/1725/melco-mango-juice-180ml.jpg;"Melco Mango Juice 180ml";;Beverages;22.500000;23.63;27;0
+2401221709;https://uae.delidel.in/1726/melco-orange-juice-180ml.jpg;"Melco Orange Juice 180ml";;Beverages;22.500000;23.63;11;0
+2401221710;https://uae.delidel.in/1727/sanabel-spaghetti-20400gm.jpg;"Sanabel Spaghetti 20*400gm";;"Dry Products";31.000000;32.55;8;0
+2401221711;https://uae.delidel.in/1728/green-tea-bag-alokozay-1100bags.jpg;"Green Tea Bag Alokozay 1*100Bags";;"Dry Products";11.000000;11.55;162;0
+2401221712;https://uae.delidel.in/1729/mango-slice-cake.jpg;"Mango Slice Cake";;Bakery;0.700000;0.74;10;0
+2401221713;https://uae.delidel.in/1730/banana-slice-cake.jpg;"Banana Slice Cake";;Bakery;0.700000;0.74;35;0
+2401221715;https://uae.delidel.in/1732/mayonnaise-tiffany-american-style.jpg;"Mayonnaise Tiffany American Style";;"Cooking Oil & Sauces";46.500000;48.83;23;0
+2401221716;https://uae.delidel.in/1735/cashew-nut-split-1kg.jpg;"Cashew Nut Split 1kg";;"Dry Products";16.000000;16.8;20;0
+2401221717;https://uae.delidel.in/1734/kimball-chilli-sauce-3340gm.jpg;"Kimball Chilli Sauce 3*340gm";;"Cooking Oil & Sauces";10.000000;10.5;68;0
+2401221718;https://uae.delidel.in/1733/chat-masala-maa-1kg.jpg;"Chat Masala Maa 1kg";;"Dry Products";29.000000;30.45;4;0
+2401221720;https://uae.delidel.in/1738/table-white-eggs-reva-15pcs.jpg;"Table White Eggs Reva (15pcs)";;"Frozen Chicken";9.500000;9.98;67;0
+2401221721;https://uae.delidel.in/1737/table-white-eggs-reva-6pcs.jpg;"Table White Eggs Reva (6pcs)";;"Frozen Chicken";4.500000;4.73;184;0
+2401221722;https://uae.delidel.in/1742/grillers-an-noor-1000gm.jpg;"Grillers An Noor 1000gm";;"Frozen Chicken";14.200000;14.91;238;0
+2401221723;https://uae.delidel.in/1740/hot-sauce-golden-falcon-88-ml.jpg;"Hot Sauce Golden Falcon 88 ml";;"Cooking Oil & Sauces";28.000000;29.4;8;0
+2401221725;https://uae.delidel.in/1743/saeed-basmati-rice-xxxl-35kg.jpg;"Saeed Basmati Rice XXXL 35kg";;"Dry Products";150.000000;157.5;19;0
+2401221726;https://uae.delidel.in/1744/french-fries-6mm-coated-farmila-25kg.jpg;"French Fries 6mm coated Farmila 2.5kg";;"French Fries & Specialities";20.250000;21.26;44;0
+2401221727;https://uae.delidel.in/1751/joshanda-sp-natural-30pkt.jpg;"Joshanda SP Natural 30pkt";;"Dry Products";9.500000;9.98;9;0
+2401221728;https://uae.delidel.in/1752/mayonnaise-real-value.jpg;"Mayonnaise Real Value";;"Cooking Oil & Sauces";17.500000;18.38;25;0
+2401221730;https://uae.delidel.in/1753/french-fries-al-islami-6mm-coated-25kg.jpg;"French Fries Al Islami 6mm Coated 2.5kg";;"French Fries & Specialities";20.250000;21.26;251;0
+2401221732;https://uae.delidel.in/1754/pulp-passionfruit-le-chef-1kg.jpg;"Pulp Passionfruit Le Chef 1kg";;"Pulp & Puree";18.000000;18.9;10;0
+2401221733;https://uae.delidel.in/1755/oreo-original-biscuit-12368gm.jpg;"Oreo Original Biscuit 12*36.8gm";;"Dry Products";12.500000;13.13;24;0
+2401221734;https://uae.delidel.in/1756/penut-butter-cream-le-supreme-340gm.jpg;"Penut Butter Cream Le Supreme 340gm";;"Dry Products";5.000000;5.25;25;0
+2401221735;https://uae.delidel.in/1757/indomie-cup-beef-noodles-60gm24.jpg;"Indomie Cup Beef Noodles 60gm*24";;"Dry Products";58.000000;60.9;10;0
+2401221736;https://uae.delidel.in/1758/indomie-cup-vegetable-noodles-60gm24.jpg;"Indomie Cup Vegetable Noodles 60gm*24";;"Dry Products";58.000000;60.9;10;0
+2401221737;https://uae.delidel.in/1759/indomie-cup-curry-noodles-60gm24.jpg;"Indomie Cup Curry Noodles 60gm*24";;"Dry Products";58.000000;60.9;20;0
+2401221738;https://uae.delidel.in/1760/honey-american-gourmet-500gm.jpg;"Honey American Gourmet 500gm";;"Dry Products";6.000000;6.3;12;0
+2401221739;https://uae.delidel.in/1761/kismis-1kg.jpg;"Kismis 1kg";;"Dry Products";20.000000;21;9;0
+2401221740;https://uae.delidel.in/1763/puttu-powder-ajmi-5kg.jpg;"Puttu Powder Ajmi 5kg";;"Dry Products";33.000000;34.65;10;0
+2401221741;https://uae.delidel.in/1764/puttu-powder-ajmi-1kg.jpg;"Puttu Powder Ajmi 1kg";;"Dry Products";8.000000;8.4;50;0

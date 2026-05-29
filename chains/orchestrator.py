@@ -25,6 +25,7 @@ from config.session import (
     get_session, save_session, append_history,
     clear_cart, set_stage, clean_number,
 )
+from utils.product_catalog import refine_product_query
 from chains.prompts import (
     INTENT_PROMPT, ORDER_PARSER_PROMPT, GREETING_PROMPT,
     PRODUCT_REPLY_PROMPT, CART_SUMMARY_PROMPT,
@@ -78,12 +79,277 @@ def _is_greeting_only(text: str) -> bool:
     }
     order_keywords = {
         "deliver", "order", "send", "box", "ctn", "ctns", "carton", "pcs", "kg",
-        "price", "rate", "cost", "available", "stock", "want", "need",
+        "price", "rate", "cost", "available", "stock", "want", "need", "have",
     }
     return (
         any(text_clean == greet or text_clean.startswith(greet + " ") for greet in greet_words)
         and not any(keyword in text_clean for keyword in order_keywords)
     )
+
+
+def _extract_availability_product(text: str) -> str:
+    text_clean = re.sub(r"\s+", " ", text.lower().strip())
+    text_clean = re.sub(r"^[^\w]+|[^\w\s]+$", "", text_clean)
+    text_clean = re.sub(r"^(?:hi|hello|hey|hii|helo|salam|assalam)\s+", "", text_clean)
+    patterns = [
+        r"^(?:do\s+)?(?:u|you)\s+have\s+(?P<product>.+)$",
+        r"^(?:is|are)\s+(?P<product>.+?)\s+available$",
+        r"^(?:have|available)\s+(?P<product>.+)$",
+    ]
+    for pattern in patterns:
+        match = re.match(pattern, text_clean)
+        if match:
+            product = re.sub(r"[^\w\s.-]", "", match.group("product")).strip()
+            product = re.sub(r"\b(?:please|pls|plz)\b", "", product).strip()
+            return product
+    return ""
+
+
+def _normalize_product_question(text: str) -> str:
+    cleaned = re.sub(r"\s+", " ", text.lower().strip())
+    cleaned = re.sub(r"[^\w\s./-]", " ", cleaned)
+    replacements = {
+        "log": "leg",
+        "pice": "piece",
+        "peice": "piece",
+        "pic": "piece",
+        "pcs": "pieces",
+        "pc": "piece",
+        "ctn": "carton",
+    }
+    for source, target in replacements.items():
+        cleaned = re.sub(rf"\b{re.escape(source)}\b", target, cleaned)
+    return re.sub(r"\s+", " ", cleaned).strip()
+
+
+def _is_hold_message(text: str) -> bool:
+    cleaned = _normalize_product_question(text)
+    return cleaned in {
+        "wait", "just wait", "wait please", "pls wait", "please wait",
+        "one minute", "1 minute", "one min", "1 min", "hold on",
+        "give me time", "give me a minute",
+    }
+
+
+def _is_bot_identity_question(text: str) -> bool:
+    cleaned = _normalize_product_question(text)
+    return bool(re.search(r"\b(robot|bot|ai|human|real person|machine)\b", cleaned))
+
+
+def _extract_size_variant_followup(text: str) -> str:
+    cleaned = _normalize_product_question(text)
+    cleaned = re.sub(r"\b(ka|ki|ke|wala|waala|price|rate|cost)\b", " ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    match = re.fullmatch(r"(?P<size>\d+(?:\.\d+)?)\s*mm", cleaned)
+    return f"{match.group('size')}mm" if match else ""
+
+
+def _product_family_from_context(state: dict) -> str:
+    context_product = state.get("last_lookup_product") or state.get("last_product", "")
+    normalized = _normalize_product_question(context_product)
+    if "fries" in normalized or "french fries" in normalized:
+        return "french fries"
+    if "chicken" in normalized and "leg" in normalized:
+        return "chicken leg"
+    return normalized
+
+
+def _format_price_amount(value) -> str:
+    try:
+        return f"{float(value or 0):.2f}"
+    except Exception:
+        return str(value).strip()
+
+
+def _refine_product_for_api(product_name: str) -> str:
+    refined = refine_product_query(product_name)
+    if refined and refined != product_name:
+        print(f"[CATALOG REFINE] '{product_name}' -> '{refined}'")
+    return refined or product_name
+
+
+def _extract_star_correction(text: str) -> str:
+    cleaned = text.strip()
+    match = re.match(r"^(?P<word>[a-zA-Z][a-zA-Z\s-]{1,30})\s*\*$", cleaned)
+    return match.group("word").strip() if match else ""
+
+
+def _is_piece_count_question(text: str) -> bool:
+    cleaned = _normalize_product_question(text)
+    has_piece_word = bool(re.search(r"\b(piece|pieces|pack|packing)\b", cleaned))
+    asks_count = bool(re.search(r"\b(how many|kitna|kitne|count)\b", cleaned))
+    has_carton_context = bool(re.search(r"\b(carton|box|ctn)\b", cleaned))
+    return has_piece_word and (asks_count or has_carton_context)
+
+
+def _is_weight_only_reply(text: str) -> bool:
+    cleaned = _normalize_product_question(text)
+    return bool(re.fullmatch(r"\d+(?:\.\d+)?\s*(kg|kgs|kilogram|kilograms)", cleaned))
+
+
+def _extract_piece_question_product(text: str, state: dict) -> str:
+    cleaned = _normalize_product_question(text)
+    cleaned = re.sub(r"\b(how many|piece|pieces|pack|packing|count|in|inside|per|one|1|carton|ctn|box|are|will|be|there|u|you|saying|is|of|the|i|am|asking)\b", " ", cleaned)
+    cleaned = re.sub(r"\b(please|pls|plz|tell|me)\b", " ", cleaned)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+
+    if cleaned and not _is_weight_only_reply(cleaned):
+        return _normalize_order_product_name(cleaned)
+
+    cart_items = state.get("cart", [])
+    if cart_items:
+        item = cart_items[0]
+        return item.get("matched_product_name") or item.get("input_product") or ""
+
+    return state.get("last_lookup_product") or state.get("last_product", "")
+
+
+def _known_pack_info(product_name: str) -> str:
+    product = _normalize_product_question(product_name)
+
+    if "chicken" in product and "leg" in product and "quarter" in product:
+        return "Chicken Leg Quarter carton is 15 kg and usually has around 17 pieces."
+    if "chicken" in product and "leg" in product:
+        return "Chicken Leg carton is 15 kg and usually has around 17 pieces."
+
+    return ""
+
+
+def _string_pack_info(value: str) -> str:
+    text = re.sub(r"\s+", " ", str(value).strip())
+    if not text:
+        return ""
+
+    pieces_match = re.search(r"\b(\d{1,4})\s*(?:pcs?|pieces?|pice|packs?)\b", text, re.IGNORECASE)
+    if pieces_match:
+        return f"{pieces_match.group(1)} pieces/packs per carton"
+
+    weight_pack_match = re.search(
+        r"\b(\d{1,3})\s*[xX*]\s*(\d+(?:\.\d+)?)\s*(?:kg|kgs|kilogram|kilograms)\b",
+        text,
+        re.IGNORECASE,
+    )
+    if weight_pack_match:
+        packs = weight_pack_match.group(1)
+        weight = weight_pack_match.group(2)
+        return f"{packs} pieces/packs per carton ({packs} x {weight} kg)"
+
+    return ""
+
+
+def _pack_info_from_product(product: dict) -> str:
+    if not isinstance(product, dict):
+        return ""
+
+    direct_keys = {
+        "pieces_per_carton", "piece_per_carton", "pcs_per_carton", "pcs_per_ctn",
+        "pieces_per_ctn", "units_per_carton", "unit_per_carton", "units_per_box",
+        "pack_per_ctn", "packs_per_ctn", "pack_per_carton", "packs_per_carton",
+        "packing_qty", "carton_packing", "ctn_value",
+    }
+    skip_key_words = {"price", "stock", "qty_available", "quantity", "id", "reference"}
+
+    for key, value in product.items():
+        key_norm = str(key).lower()
+        if key_norm in direct_keys and value not in ("", None):
+            value_text = str(value).strip()
+            unit_label = "packs" if "pack" in key_norm or key_norm in {"ctn_value"} else "pieces"
+            if re.fullmatch(r"\d+(?:\.\d+)?", value_text):
+                return f"{_format_currency(value_text)} {unit_label} per carton"
+            parsed = _string_pack_info(value_text)
+            return parsed or f"{value_text} per carton"
+
+    for key, value in product.items():
+        key_norm = str(key).lower()
+        if any(word in key_norm for word in skip_key_words):
+            continue
+        if not any(word in key_norm for word in ("pack", "piece", "pcs", "ctn", "carton", "box", "description", "name")):
+            continue
+        parsed = _string_pack_info(value)
+        if parsed:
+            return parsed
+
+    return ""
+
+
+def _lookup_pack_info(product_name: str, sender: str, state: dict) -> tuple[str, str]:
+    if not product_name:
+        return "", ""
+
+    api_product_name = _refine_product_for_api(product_name)
+    raw = search_products.invoke({
+        "product_name": api_product_name,
+        "sender_number": sender,
+    })
+    print(f"\n[PACK INFO API RESPONSE] {raw[:2000]}\n")
+    data = _safe_json(raw, {})
+    products = data.get("products", [])
+    if not products:
+        return "", ""
+
+    product = products[0]
+    matched_name = product.get("name") or api_product_name
+    state["last_lookup_product"] = matched_name
+    state["last_product"] = matched_name
+
+    return _pack_info_from_product(product), matched_name
+
+
+def _handle_piece_count_question(state: dict, user_message: str, sender: str) -> tuple[str, dict]:
+    product = _extract_piece_question_product(user_message, state)
+    state["last_piece_question_product"] = product
+
+    lookup_info, matched_name = _lookup_pack_info(product, sender, state)
+    if lookup_info:
+        product_label = matched_name or product
+        return f"{product_label} carton has {lookup_info}.", state
+
+    known_reply = _known_pack_info(product)
+    if known_reply:
+        return f"{known_reply}\n\nPiece count can vary slightly by size.", state
+
+    if product:
+        return (
+            f"I can see you are asking about *{product}*, but I don't have the exact "
+            "pieces-per-carton saved for this item. I can check with the team and confirm."
+        ), state
+
+    return "Which product should I check pieces-per-carton for?", state
+
+
+def _format_product_lookup_reply(products: list, intent_key: str, product_name: str) -> str:
+    if not products:
+        return f"Sorry, I couldn't find *{product_name}*. Please try a different product name."
+
+    product = products[0]
+    name = product.get("name") or product_name or "this item"
+    price = _format_price_amount(product.get("price", 0))
+    stock = int(float(product.get("stock", 0) or 0))
+
+    if stock <= 0:
+        stock_line = "It is currently out of stock."
+    elif stock <= 5:
+        stock_line = f"It is low in stock ({stock} left)."
+    else:
+        stock_line = "It is in stock."
+
+    if intent_key == "price_check":
+        return f"The carton price for *{name}* is AED {price}.\n\nNeed anything else? 😊"
+
+    if intent_key == "stock_check":
+        return f"*{name}* is available. {stock_line}\n\nNeed anything else? 😊"
+
+    return f"*{name}* is available. {stock_line}\nThe carton price is AED {price}.\n\nNeed anything else? 😊"
+
+
+def _is_order_request_without_product(text: str) -> bool:
+    text_clean = re.sub(r"[^\w\s]", " ", text.lower().strip())
+    text_clean = re.sub(r"\s+", " ", text_clean).strip()
+    text_clean = re.sub(r"^(?:hi|hello|hey|hii|helo|salam|assalam)\s+", "", text_clean)
+    return bool(re.search(
+        r"^(?:i\s+want\s+to\s+order|want\s+to\s+order|need\s+to\s+order|place\s+order|make\s+order|order\s+karna|order\s+dena)(?:\s+(?:please|pls|plz))?$",
+        text_clean,
+    ))
 
 
 def _is_yes_confirmation(text: str) -> bool:
@@ -416,7 +682,7 @@ def _parsed_to_api_products(parsed_products: list[dict]) -> list[dict]:
         
         # Check if quantity or name represents 1/2 or half
         qty_val = item.get("quantity", 1)
-        name_val = item.get("name", "").lower()
+        name_val = _refine_product_for_api(item.get("name", "")).lower()
         
         is_half = 0
         # Check quantity (float, integer, or string representations)
@@ -453,6 +719,7 @@ def _validate_and_format_cart(parsed_products: list[dict], sender: str, state: d
     state["cart_total"] = cart_total
     state["cart_session_id"] = cart_session_id
     state["stage"] = "awaiting_confirm"
+    state.pop("confirmation_paused", None)
     
     import time
     state["cart_updated_at"] = time.time()
@@ -665,6 +932,7 @@ def handle_product_lookup(state: dict, sender: str, intent: dict) -> str:
     if not product_name:
         return "Could you tell me which product you're looking for? 😊"
 
+    product_name = _refine_product_for_api(product_name)
     raw = search_products.invoke({
         "product_name": product_name,
         "sender_number": sender,
@@ -679,6 +947,13 @@ def handle_product_lookup(state: dict, sender: str, intent: dict) -> str:
     state["last_lookup_product"] = top_product_name or product_name
 
     products_json = json.dumps(products)
+
+    if len(products) <= 1:
+        return _format_product_lookup_reply(
+            products,
+            intent.get("intent", "price_check"),
+            product_name,
+        )
 
     reply = product_chain.invoke({
         "customer_name": "",
@@ -1018,6 +1293,65 @@ def process_message(user_input: str, sender_number: str) -> str:
         save_session(number_key, state)
         return reply
 
+    correction = _extract_star_correction(user_input)
+    if correction and state.get("last_piece_question_product"):
+        base_product = _normalize_product_question(state.get("last_piece_question_product", ""))
+        corrected_word = _normalize_product_question(correction)
+        if corrected_word and corrected_word not in base_product:
+            product = f"{base_product} {corrected_word}".strip()
+        else:
+            product = base_product or corrected_word
+        reply, state = _handle_piece_count_question(state, product, sender_number)
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    if _is_hold_message(user_input):
+        reply = "Sure, I'll wait."
+        if stage == "awaiting_confirm":
+            state["confirmation_paused"] = True
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    if _is_bot_identity_question(user_input):
+        reply = "I'm Delidel's assistant. I can help with prices, stock, carton packing, orders, and order status."
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    size_variant = _extract_size_variant_followup(user_input)
+    if size_variant:
+        product_family = _product_family_from_context(state)
+        if product_family:
+            reply = handle_product_lookup(state, sender_number, {
+                "intent": "price_check",
+                "product_name": f"{product_family} {size_variant}",
+            })
+        else:
+            reply = f"Which product do you mean for {size_variant}?"
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    if _is_piece_count_question(user_input):
+        reply, state = _handle_piece_count_question(state, user_input, sender_number)
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    if _is_weight_only_reply(user_input) and state.get("last_piece_question_product"):
+        reply, state = _handle_piece_count_question(state, state["last_piece_question_product"], sender_number)
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
     if _reference_order_requested(user_input) and state.get("last_lookup_product"):
         pending_products = [{
             "name": _normalize_order_product_name(state["last_lookup_product"]),
@@ -1072,6 +1406,13 @@ def process_message(user_input: str, sender_number: str) -> str:
 
     if stage == "awaiting_confirm":
         if _is_yes_confirmation(user_input):
+            if state.get("confirmation_paused") and _normalize_product_question(user_input) in {"ok", "okay", "k"}:
+                reply = "No problem, take your time."
+                state = append_history(state, "human", original_input)
+                state = append_history(state, "assistant", reply)
+                save_session(number_key, state)
+                return reply
+            state.pop("confirmation_paused", None)
             reply, state = handle_confirm_order(state, sender_number)
             state = append_history(state, "human", original_input)
             state = append_history(state, "assistant", reply)
@@ -1112,6 +1453,25 @@ def process_message(user_input: str, sender_number: str) -> str:
     # ── Greeting shortcut (before LLM classify) ──
     if _is_greeting_only(user_input):
         reply = handle_greeting(state, sender_number)
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    # ── Availability shortcut (before LLM classify) ──
+    if _is_order_request_without_product(user_input):
+        reply = handle_order_no_qty(state, {"product_name": ""})
+        state = append_history(state, "human", original_input)
+        state = append_history(state, "assistant", reply)
+        save_session(number_key, state)
+        return reply
+
+    availability_product = _extract_availability_product(user_input)
+    if availability_product:
+        reply = handle_product_lookup(state, sender_number, {
+            "intent": "stock_check",
+            "product_name": availability_product,
+        })
         state = append_history(state, "human", original_input)
         state = append_history(state, "assistant", reply)
         save_session(number_key, state)
